@@ -31,11 +31,19 @@
         </div>
 
         <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(242,236,225,0.7)">Choose an amount</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px">
           <sc-for list="{{ amountOptions }}" as="a" hint-placeholder-count="4">
             <button onClick="{{ a.onClick }}" style="padding: 10px 16px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 13px; background: {{ a.bg }}; border: 1px solid {{ a.border }}; color: {{ a.fg }}">{{ a.label }}</button>
           </sc-for>
+          <button onClick="{{ pickCustom }}" style="padding: 10px 16px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 13px; background: {{ customBg }}; border: 1px solid {{ customBorder }}; color: {{ customFg }}">Another amount</button>
         </div>
+        <sc-if value="{{ isCustom }}" hint-placeholder-val="{{ false }}">
+          <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 12px 14px; border: 1px solid rgba(232,176,75,0.4); background: rgba(232,176,75,0.05)">
+            <span style="font-family: 'Marcellus', serif; font-size: 20px; color: #e8b04b">{{ currencySymbol }}</span>
+            <input type="number" min="1" step="1" placeholder="{{ customPlaceholder }}" value="{{ customValue }}" onChange="{{ setCustom }}" style="flex: 1 1 auto; min-width: 0; padding: 8px 10px; background: #12142c; border: 1px solid rgba(242,236,225,0.2); color: #f2ece1; font-family: 'IBM Plex Mono', monospace; font-size: 15px; border-radius: 2px" />
+          </label>
+        </sc-if>
+        <div style="margin-bottom: 10px"></div>
 
         <sc-if value="{{ showUpi }}" hint-placeholder-val="{{ true }}">
           <div style="display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); align-items: center; padding: 18px; border: 1px solid rgba(232,176,75,0.35); background: rgba(232,176,75,0.06)">
@@ -65,7 +73,16 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:180,&quot;height&quot;:60},&quot;upiId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;9999985843@upi&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;payeeName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Muni&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;paypalLink&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.com/paypalme/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;inrAmounts&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;number[]&quot;},&quot;usdAmounts&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;number[]&quot;}}">
 class Component extends DCLogic {
-  state = { isOpen: false, region: "india", inr: 250, usd: 5 };
+  state = { isOpen: false, region: "india", inr: 250, usd: 5, custom: false, customText: "" };
+
+  amount() {
+    const st = this.state;
+    if (st.custom) {
+      const n = Math.max(1, Math.round(Number(st.customText) || 0));
+      return n || (st.region === "india" ? 250 : 5);
+    }
+    return st.region === "india" ? st.inr : st.usd;
+  }
 
   componentDidMount() {
     this.onKey = (e) => { if (e.key === "Escape") this.setState({ isOpen: false }); };
@@ -77,7 +94,7 @@ class Component extends DCLogic {
     const p = new URLSearchParams({
       pa: this.props.upiId || "9999985843@upi",
       pn: this.props.payeeName || "Muni",
-      am: String(this.state.inr),
+      am: String(this.amount()),
       cu: "INR",
       tn: "Support munimarga.in"
     });
@@ -105,6 +122,7 @@ class Component extends DCLogic {
       fg: on ? "#0d0f24" : "rgba(242,236,225,0.9)"
     });
     const iSel = sel(india), wSel = sel(!india);
+    const amt = this.amount();
     const uri = this.upiUri();
     const data = india ? this.qrDataUrl(uri) : "";
 
@@ -113,27 +131,34 @@ class Component extends DCLogic {
       open: () => this.setState({ isOpen: true }),
       close: () => this.setState({ isOpen: false }),
       stop: (e) => e.stopPropagation(),
-      pickIndia: () => this.setState({ region: "india" }),
-      pickIntl: () => this.setState({ region: "intl" }),
+      pickIndia: () => this.setState({ region: "india", custom: false, customText: "" }),
+      pickIntl: () => this.setState({ region: "intl", custom: false, customText: "" }),
       indiaBg: iSel.bg, indiaBorder: iSel.border, indiaFg: iSel.fg,
       intlBg: wSel.bg, intlBorder: wSel.border, intlFg: wSel.fg,
       amountOptions: (india ? inrAmounts : usdAmounts).map(v => {
-        const on = india ? st.inr === v : st.usd === v;
+        const on = !st.custom && (india ? st.inr === v : st.usd === v);
         const s = sel(on);
         return {
           label: india ? "₹" + v.toLocaleString("en-IN") : "$" + v,
           bg: s.bg, border: s.border, fg: s.fg,
-          onClick: () => this.setState(india ? { inr: v } : { usd: v })
+          onClick: () => this.setState(india ? { inr: v, custom: false } : { usd: v, custom: false })
         };
       }),
-      amountLabel: india ? "₹" + st.inr.toLocaleString("en-IN") : "$" + st.usd,
+      isCustom: st.custom,
+      pickCustom: () => this.setState({ custom: true }),
+      customBg: sel(st.custom).bg, customBorder: sel(st.custom).border, customFg: sel(st.custom).fg,
+      currencySymbol: india ? "₹" : "$",
+      customPlaceholder: india ? "e.g. 1100" : "e.g. 20",
+      customValue: st.customText,
+      setCustom: (e) => this.setState({ customText: e.target.value, custom: true }),
+      amountLabel: india ? "₹" + amt.toLocaleString("en-IN") : "$" + amt.toLocaleString("en-US"),
       showUpi: india,
       showPaypal: !india,
       upiId: this.props.upiId ?? "9999985843@upi",
       upiLink: uri,
       qrEl: data ? React.createElement("img", { src: data, alt: "UPI QR code", style: { width: "100%", maxWidth: "150px", aspectRatio: "1 / 1", background: "#f2ece1", padding: "7px", borderRadius: "2px" } }) : null,
       paypalUrl: "https://www.paypal.com/donate/?business=" + encodeURIComponent(ppEmail) +
-        "&amount=" + st.usd + "&currency_code=USD&item_name=" + encodeURIComponent("Support Muni · munimarga.in") + "&no_note=0"
+        "&amount=" + amt + "&currency_code=USD&item_name=" + encodeURIComponent("Support Muni · munimarga.in") + "&no_note=0"
     };
   }
 }

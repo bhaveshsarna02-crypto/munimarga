@@ -187,6 +187,9 @@
             </div>
             <input required="required" type="email" placeholder="Email" value="{{ email }}" onChange="{{ setEmail }}" style="padding: 13px 15px; background: #12142c; border: 1px solid rgba(242,236,225,0.2); color: #f2ece1; font-family: 'Spectral', serif; font-size: 15px; border-radius: 2px" />
             <textarea rows="3" placeholder="Your question, and birth date / time / place if this is an astrology reading" value="{{ note }}" onChange="{{ setNote }}" style="padding: 13px 15px; background: #12142c; border: 1px solid rgba(242,236,225,0.2); color: #f2ece1; font-family: 'Spectral', serif; font-size: 15px; border-radius: 2px; resize: vertical"></textarea>
+            <sc-if value="{{ slotFirst }}" hint-placeholder-val="{{ false }}">
+              <p style="margin: 0; padding: 16px; border: 1px dashed rgba(232,176,75,0.4); background: rgba(232,176,75,0.04); font-size: 14px; line-height: 1.6; color: rgba(242,236,225,0.86)">Choose a date and a time above. The terms and payment appear once a slot is held.</p>
+            </sc-if>
             <sc-if value="{{ needsTerms }}" hint-placeholder-val="{{ true }}">
             <label style="display: flex; gap: 12px; align-items: flex-start; padding: 16px; border: 1px solid rgba(232,176,75,0.35); background: rgba(232,176,75,0.05); border-radius: 2px; cursor: pointer">
               <input type="checkbox" required="required" checked="{{ agreed }}" onChange="{{ toggleAgreed }}" style="margin: 3px 0 0; width: 18px; height: 18px; accent-color: #e8b04b; flex: 0 0 auto" />
@@ -587,8 +590,9 @@ class Component extends DCLogic {
       phone: st.phone, setPhone: (e) => this.setState({ phone: e.target.value }),
       email: st.email, setEmail: (e) => this.setState({ email: e.target.value }),
       note: st.note, setNote: (e) => this.setState({ note: e.target.value }),
-      needsTerms: !unsure,
-      showPay: !unsure && st.agreed,
+      needsTerms: !unsure && !!st.date && !!st.slot,
+      slotFirst: !unsure && !(st.date && st.slot),
+      showPay: !unsure && !!st.date && !!st.slot && st.agreed,
       pickIndia: () => this.setState({ region: "india" }),
       pickIntl: () => this.setState({ region: "intl" }),
       indiaBg: india.bg, indiaBorder: india.border, indiaFg: india.fg,
@@ -596,8 +600,8 @@ class Component extends DCLogic {
       payNote: st.region === "india"
         ? `Pay ₹${priceInr.toLocaleString("en-IN")} by UPI, then paste the reference below. I confirm the slot by WhatsApp.`
         : `Pay $${priceUsd} by PayPal, then paste the transaction ID below. I confirm the slot by email.`,
-      showUpi: !unsure && st.agreed && st.region === "india",
-      showPaypal: !unsure && st.agreed && st.region === "intl",
+      showUpi: !unsure && !!st.date && !!st.slot && st.agreed && st.region === "india",
+      showPaypal: !unsure && !!st.date && !!st.slot && st.agreed && st.region === "intl",
       upiId,
       paypalLink: "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=" + encodeURIComponent(ppEmail) +
         "&amount=" + priceUsd + "&currency_code=USD&item_name=" + encodeURIComponent("Reading — Muni") + "&no_shipping=1",
