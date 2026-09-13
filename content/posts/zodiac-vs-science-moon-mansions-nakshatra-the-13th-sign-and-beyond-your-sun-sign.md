@@ -8,9 +8,9 @@ group: "astrology"
 accent: "#e8b04b"
 read: "7 min"
 excerpt: "The zodiac and the nakshatra system are two celestial frameworks that have shaped how humanity reads the sky. Where they agree, and where they do not."
-cover: "https://static.wixstatic.com/media/cddff6_9f3203310672402e987fb2b93121d03c~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_9f3203310672402e987fb2b93121d03c~mv2.png"
+cover: "/assets/uploads/cddff6_9f3203310672402e987fb2b93121d03c.png"
 ---
-![Zodiac signs and nakshatras](https://static.wixstatic.com/media/cddff6_406e9b20a90d471ab1376e5757e664f2~mv2.png/v1/fill/w_967,h_376,al_c,q_90,enc_auto/cddff6_406e9b20a90d471ab1376e5757e664f2~mv2.png)
+![Zodiac signs and nakshatras](/assets/uploads/cddff6_406e9b20a90d471ab1376e5757e664f2.png)
 
 ## Introduction
 

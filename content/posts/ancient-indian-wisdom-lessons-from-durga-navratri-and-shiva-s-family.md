@@ -8,13 +8,13 @@ group: "gods"
 accent: "#f2b240"
 read: "12 min"
 excerpt: "Profound lessons on harmony from the stories of the Divine Feminine, the festival of Navratri, and the symbolism of Shiva's family."
-cover: "https://static.wixstatic.com/media/cddff6_f21c7436fa344eca8ab6833433fc41ef~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_f21c7436fa344eca8ab6833433fc41ef~mv2.png"
+cover: "/assets/uploads/cddff6_f21c7436fa344eca8ab6833433fc41ef.png"
 ---
 ## When Gods Needed a Goddess: The Power of the Divine Feminine
 
 In an era when women in Athens required a male guardian, known as a Kayosis, for their protection, India was a land where even the gods turned to a goddess for their own salvation. This striking contrast, highlighted by author Manoj Srivastava, sets the stage for a deeper understanding of the reverence for the divine feminine in Indian philosophy. The Athenian model was one of physical and social guardianship, a framework built on perceived female vulnerability. The Indian narrative, however, presents a reality where the feminine is the ultimate spiritual guardian of the entire cosmos, the source from which all strength emanates. This isn't merely a mythological tale; it's a profound philosophical statement about the nature of reality itself, encapsulated in the concepts of Purusha (pure, formless consciousness) and Prakriti (the dynamic, creative, feminine energy of nature). While Purusha is the silent witness, it is Prakriti that manifests, creates, sustains, and transforms the universe. Without her, consciousness has no expression.
 
-![Maa Durga](https://static.wixstatic.com/media/cddff6_f21c7436fa344eca8ab6833433fc41ef~mv2.png/v1/fill/w_980,h_551,al_c,q_90,enc_auto/cddff6_f21c7436fa344eca8ab6833433fc41ef~mv2.png)
+![Maa Durga](/assets/uploads/cddff6_f21c7436fa344eca8ab6833433fc41ef.png)
 
 When the gods themselves were overwhelmed, their strength and celestial weapons proving futile against the primal chaos unleashed by demons like Madhu-Kaitabha, they united in prayer. Their collective surrender was not a sign of weakness, but of profound wisdom—the recognition that some forces can only be overcome by tapping into the source of all creation, the Adi Shakti. They sought refuge in the ultimate power—the Mother Goddess. It’s a profound reminder that when all else fails, when ego and effort are exhausted, we often turn to the maternal source of strength. As a beautiful couplet goes, “When the sons get tired, they go towards their mothers; when they get tired of the city, they go towards their villages.” This isn't just about physical tiredness; it's about a spiritual weariness that only a return to the source can heal, a longing for the unconditional embrace of our origins.
 
@@ -82,7 +82,7 @@ The final day of worship, dedicated to Goddess Siddhidatri, the bestower of all 
 
 ## The Ultimate Lesson in Harmony: Shiva's Family
 
-![Shiva with Parvati, Ganesha, Kartikeya, Nandi, the peacock and the mouse](https://static.wixstatic.com/media/cddff6_04fc25b1c445424bb5135aaac62adbd5~mv2.png/v1/fill/w_574,h_750,al_c,q_90,enc_auto/cddff6_04fc25b1c445424bb5135aaac62adbd5~mv2.png)
+![Shiva with Parvati, Ganesha, Kartikeya, Nandi, the peacock and the mouse](/assets/uploads/cddff6_04fc25b1c445424bb5135aaac62adbd5.png)
 
 The most powerful metaphor for a harmonious life comes from observing Lord Shiva's family. It’s what Acharya Shukla called the “harmony of contradictions” (Virodho ka Samanjasya). It presents an impossible, paradoxical scene that holds the deepest truth about existence, a truth that applies to our families, societies, and our own minds. It's a living teaching on the transcendence of the three fundamental qualities of nature, the Gunas, which are the building blocks of all material existence.
 

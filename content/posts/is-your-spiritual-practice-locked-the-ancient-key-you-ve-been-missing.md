@@ -8,7 +8,7 @@ group: "spiritual"
 accent: "#6ab2a0"
 read: "8 min"
 excerpt: "The effectiveness of spiritual practice hinges on initiation by a true Guru, who unlocks the latent power of mantras. Divine power redefined not as worldly influence but as the ability to transmute suffering."
-cover: "https://static.wixstatic.com/media/cddff6_75483295a084484a8c2b42c61d590fbd~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_75483295a084484a8c2b42c61d590fbd~mv2.png"
+cover: "/assets/uploads/cddff6_75483295a084484a8c2b42c61d590fbd.png"
 ---
 ## The Secret Behind Sacred Chants and Divine Power
 
@@ -26,7 +26,7 @@ However, the spiritual path is not static; every soul is at a different stage of
 
 ## The Cosmic Dance of Shiva and Shakti
 
-![Hierarchy of cosmic power](https://static.wixstatic.com/media/cddff6_75483295a084484a8c2b42c61d590fbd~mv2.png/v1/fill/w_714,h_666,al_c,q_90,enc_auto/cddff6_75483295a084484a8c2b42c61d590fbd~mv2.png)
+![Hierarchy of cosmic power](/assets/uploads/cddff6_75483295a084484a8c2b42c61d590fbd.png)
 
 To understand divine power, we must understand the fundamental duality of the universe: Shiva and Shakti. Shiva represents pure, unmanifested consciousness—the silent, formless potential behind everything. He is the vast, still ocean. But Shakti, the Divine Mother, is the dynamic, creative energy that brings the universe into being. She is the waves, the tides, and the currents within that ocean. Shiva is the ultimate giver, the bestower of boons, but Shakti is the ultimate controller and distributor. She is the cosmic intelligence who decides who receives what, why, and how much. She holds the universe in a delicate, intelligent balance.
 
@@ -60,7 +60,7 @@ The Mother is not swayed by flattery; she is a rational, discerning force. She k
 
 This brings us to a major issue in modern astrology: the obsession with “upay,” or remedies, as transactional quick fixes. The ancient texts, like the Parashara Hora Shastra, do mention remedies, but they are nuanced and deeply scientific. The prescribed remedy depends on the elemental nature of the planet causing trouble in your chart, as each element corresponds to a different way of interacting with cosmic energy.
 
-![Planetary energy remedies based on zodiac signs](https://static.wixstatic.com/media/cddff6_2c5680ce35f0436d86b272414053e970~mv2.png/v1/fill/w_943,h_624,al_c,q_90,enc_auto/cddff6_2c5680ce35f0436d86b272414053e970~mv2.png)
+![Planetary energy remedies based on zodiac signs](/assets/uploads/cddff6_2c5680ce35f0436d86b272414053e970.png)
 
 Earth Element: for a planet in an earth sign (Taurus, Virgo, Capricorn), its energy is dense and physical. Thus, wearing a gemstone is effective. A gemstone is a highly concentrated and structured form of planetary energy that resonates with our physical and etheric bodies, slowly stabilizing and strengthening the planet's influence over time. It's not a magic pill, but a gradual regulator.
 

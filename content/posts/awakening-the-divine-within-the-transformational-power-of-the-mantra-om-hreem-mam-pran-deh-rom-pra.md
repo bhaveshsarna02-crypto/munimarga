@@ -8,13 +8,13 @@ group: "mantra"
 accent: "#6ab2a0"
 read: "12 min"
 excerpt: "A close reading of \"Om Hreem Mam Pran Deh Rom Pratirom Chaitanya Jagraya Hreem Om Swaha\", what each part carries, and how the mantra is traditionally approached."
-cover: "https://static.wixstatic.com/media/cddff6_3d830b7b7b284b43b8aade64d030ea06~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_3d830b7b7b284b43b8aade64d030ea06~mv2.png"
+cover: "/assets/uploads/cddff6_3d830b7b7b284b43b8aade64d030ea06.png"
 ---
 > Om Hreem Mam Pran Deh Rom Pratirom Chaitanya Jagraya Hreem Om Swaha
 
 Important disclaimer: this article is provided for informational and discussion purposes only and is not intended as a substitute for traditional spiritual initiation or guidance (Diksha). The practices and concepts described herein are deeply rooted in specific spiritual traditions. Anyone considering the practice of this or any mantra is strongly advised to consult with a qualified spiritual teacher or Guru who can provide personalized instruction, ensure correct pronunciation, and offer appropriate guidance based on individual needs and circumstances.
 
-![Cellular awakening, vital energy and pure consciousness](https://static.wixstatic.com/media/cddff6_3d830b7b7b284b43b8aade64d030ea06~mv2.png/v1/fill/w_980,h_887,al_c,q_90,enc_auto/cddff6_3d830b7b7b284b43b8aade64d030ea06~mv2.png)
+![Cellular awakening, vital energy and pure consciousness](/assets/uploads/cddff6_3d830b7b7b284b43b8aade64d030ea06.png)
 
 In the profound and ancient spiritual traditions of India, dating back millennia, mantras have long been revered as more than mere sounds; they are considered vibrational keys capable of unlocking profound states of consciousness, fostering deep physiological healing, and awakening the very essence of the soul. These sacred incantations are believed to be living energies, imbued with specific powers to resonate with and transform various layers of human existence. Among this vast treasury of spiritual tools, one particularly profound mantra stands out for its comprehensive invocation of inner awakening. While its length and Sanskrit origins might initially present an impression of complexity, within its meticulously arranged syllables lies a deep, intricate tapestry of transformative energy.
 
@@ -58,7 +58,7 @@ When these individual, potent syllables are woven together, the mantra reveals i
 
 The sustained and focused chanting of this mantra sets in motion a series of profound psychological and energetic shifts within the practitioner, extending its influence far beyond mere intellectual comprehension.
 
-![The cycle of mantra-driven awakening](https://static.wixstatic.com/media/cddff6_9b08607a27624f2a87692b2b14d7be9b~mv2.png/v1/fill/w_963,h_706,al_c,q_90,enc_auto/cddff6_9b08607a27624f2a87692b2b14d7be9b~mv2.png)
+![The cycle of mantra-driven awakening](/assets/uploads/cddff6_9b08607a27624f2a87692b2b14d7be9b.png)
 
 The symphony of cellular awakening: when this mantra is chanted with unwavering focus and deep intention, it generates a unique vibrational signal that penetrates to the deepest levels of the physical form, effectively communicating with and awakening every single cell in the body. In the realm of modern energy psychology, there is growing recognition of the significance of somatic awareness – the ability to feel and sense the body from within. This mantra activates this somatic awareness on an even more profound, fundamental, and vibrational level, stirring the very cellular memory.
 

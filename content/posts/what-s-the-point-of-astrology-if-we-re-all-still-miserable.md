@@ -8,7 +8,7 @@ group: "astrology"
 accent: "#e8b04b"
 read: "3 min"
 excerpt: "An astrologer can show you the path, but you need to take your own responsibility."
-cover: "https://static.wixstatic.com/media/cddff6_96bd0e7f075f48fe9ea936503adaeea1~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_96bd0e7f075f48fe9ea936503adaeea1~mv2.jpg"
+cover: "/assets/uploads/cddff6_96bd0e7f075f48fe9ea936503adaeea1.jpg"
 ---
 ## Sometimes astrology also needs your help
 

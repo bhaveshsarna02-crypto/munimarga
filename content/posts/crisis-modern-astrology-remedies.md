@@ -8,7 +8,7 @@ group: "astrology"
 accent: "#e8b04b"
 read: "7 min"
 excerpt: "Why modern astrology remedies often fail, and the difference between quick fixes and authentic Vedic wisdom in understanding the true purpose of your birth chart."
-cover: "https://static.wixstatic.com/media/cddff6_0a80e37e23974513882f7fef2985f51a~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_0a80e37e23974513882f7fef2985f51a~mv2.png"
+cover: "/assets/uploads/cddff6_0a80e37e23974513882f7fef2985f51a.png"
 ---
 Astrology is more popular than ever. In an age of instant gratification, a simple scroll through social media feeds reveals a universe of digital soothsayers promising quick fixes for every imaginable problem—a gemstone for wealth, a ritual for love, a chant for success. This modern, remedy-focused approach, while alluring, is creating a deep and damaging crisis within this ancient science. It's time to pull back the curtain and ask a critical question: are these astrology remedies truly helping, or are they a spiritual placebo, leading us astray from the profound wisdom a birth chart has to offer?
 
@@ -16,7 +16,7 @@ Astrology is more popular than ever. In an age of instant gratification, a simpl
 
 The single biggest weakness of modern astrology is its obsessive over-reliance on remedies. People no longer approach astrologers for guidance or self-understanding; they come with a desperate hope of changing their destiny. They see their birth chart not as a map of their soul's journey, but as a faulty blueprint that needs immediate and magical correction. This represents a fundamental misunderstanding of what astrology was, and is, meant to be. It's a shift from seeking wisdom to demanding intervention, a desire to outsource personal responsibility to a cosmic quick fix. This culture of instant solutions feeds a spiritual consumerism where enlightenment is mistaken for a transaction, and personal growth is sidestepped in favor of a purchased miracle.
 
-![The allure of the quick fix](https://static.wixstatic.com/media/cddff6_0a80e37e23974513882f7fef2985f51a~mv2.png/v1/fill/w_871,h_838,al_c,q_90,enc_auto/cddff6_0a80e37e23974513882f7fef2985f51a~mv2.png)
+![The allure of the quick fix](/assets/uploads/cddff6_0a80e37e23974513882f7fef2985f51a.png)
 
 ## The Lost Science of True Vedic Remedies (Upayas)
 

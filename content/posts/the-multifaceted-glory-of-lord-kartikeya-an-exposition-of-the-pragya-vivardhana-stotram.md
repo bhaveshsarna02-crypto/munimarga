@@ -8,9 +8,9 @@ group: "mantra"
 accent: "#6ab2a0"
 read: "6 min"
 excerpt: "The Kartikeya Pragya Vivardhana Stotram, traditionally understood to be from the Rudra Yamala Tantra, read verse by verse."
-cover: "https://static.wixstatic.com/media/cddff6_b18be44143c540feb4caf3498f57ec08~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_b18be44143c540feb4caf3498f57ec08~mv2.png"
+cover: "/assets/uploads/cddff6_b18be44143c540feb4caf3498f57ec08.png"
 ---
-![Lord Kartikeya](https://static.wixstatic.com/media/cddff6_b18be44143c540feb4caf3498f57ec08~mv2.png/v1/fill/w_980,h_692,al_c,q_90,enc_auto/cddff6_b18be44143c540feb4caf3498f57ec08~mv2.png)
+![Lord Kartikeya](/assets/uploads/cddff6_b18be44143c540feb4caf3498f57ec08.png)
 
 The Kartikeya Pragya Vivardhana Stotram, a revered hymn traditionally understood to be from the Rudra Yamala Tantra, is a powerful invocation dedicated to Lord Kartikeya, who is also known by names such as Skanda, Murugan, and Subramanya. This stotram is specifically lauded for its ability to enhance “Pragya,” a term signifying intellect or wisdom, and its composition is often attributed to Skanda himself. It meticulously enumerates various names and attributes of Lord Kartikeya, each elucidating a different facet of his divine personality and power, ranging from his martial prowess to his profound spiritual wisdom. The central thesis is that the stotram not only celebrates Lord Kartikeya as a valiant commander and a divine son but also as the embodiment of supreme knowledge and the bestower of both worldly success and ultimate liberation, making its recitation a path to profound intellectual and spiritual enhancement.
 

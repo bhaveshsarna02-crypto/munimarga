@@ -8,13 +8,13 @@ group: "astrology"
 accent: "#e8b04b"
 read: "6 min"
 excerpt: "How karma shapes your reality, and why planetary influences — even from challenging planets like Rahu — are not fixed punishments but opportunities for growth."
-cover: "https://static.wixstatic.com/media/cddff6_55156d8c1f70419cb5882debdf13fb80~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_55156d8c1f70419cb5882debdf13fb80~mv2.png"
+cover: "/assets/uploads/cddff6_55156d8c1f70419cb5882debdf13fb80.png"
 ---
 Have you ever gazed at the night sky and wondered if your life's story is already written in the stars? Are you truly in control, or is your path predetermined by the planets in your horoscope? This is a profound question that humanity has pondered for millennia, and the answer is far more empowering and nuanced than you might think. Can you truly change your planetary influences—your dasha—through your own feelings, actions, and spiritual devotion? Is it genuinely possible to become the co-author of your own destiny?
 
 Let's explore this unique and liberating perspective, moving beyond fatalism and into a world of conscious co-creation with the cosmos.
 
-![Transforming destiny — the planets and their bhav](https://static.wixstatic.com/media/cddff6_55156d8c1f70419cb5882debdf13fb80~mv2.png/v1/fill/w_980,h_553,al_c,q_90,enc_auto/cddff6_55156d8c1f70419cb5882debdf13fb80~mv2.png)
+![Transforming destiny — the planets and their bhav](/assets/uploads/cddff6_55156d8c1f70419cb5882debdf13fb80.png)
 
 ## Understanding the Planets (Grahas) and Your Karma
 

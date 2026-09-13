@@ -8,7 +8,7 @@ group: "gods"
 accent: "#f2b240"
 read: "12 min"
 excerpt: "The significance of the Divine Mother (Adi Shakti) in Hinduism: why her word is final, the power of sincere devotion, and how this ancient wisdom contrasts with Western views."
-cover: "https://static.wixstatic.com/media/11062b_df813511f9604834a854b6004f35d1ff~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85,enc_auto/11062b_df813511f9604834a854b6004f35d1ff~mv2.jpg"
+cover: "/assets/uploads/11062b_df813511f9604834a854b6004f35d1ff.jpg"
 ---
 There's a beautifully insightful saying, a piece of folk wisdom that resonates through the heart of Hindu devotion:
 
@@ -16,7 +16,7 @@ There's a beautifully insightful saying, a piece of folk wisdom that resonates t
 
 This means: “Everyone bows and chants the Father's name, but no one thinks to call for the Mother. Yet, in the Father's own court, it is only what the Mother says that comes to pass.”
 
-![Goddess Durga](https://static.wixstatic.com/media/11062b_df813511f9604834a854b6004f35d1ff~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,enc_auto/11062b_df813511f9604834a854b6004f35d1ff~mv2.jpg)
+![Goddess Durga](/assets/uploads/11062b_df813511f9604834a854b6004f35d1ff.jpg)
 
 This simple couplet is not just poetry; it's a profound spiritual directive, a key to unlocking a deeper dimension of cosmic governance. It speaks to a universal human tendency to appeal to the visible, authoritative “father” figure—the powerful Lord Shiva, the majestic Vishnu, the Creator Brahma. He represents structure, law, and power, the static principle of consciousness (Purusha). Yet, this folk wisdom gently pulls back the curtain, reminding us that behind that formidable power stands an even more fundamental, primordial force: the Divine Mother, the Adi Shakti. She is the dynamic energy of creation (Prakriti), the ultimate arbiter, the source from which all power flows. She doesn't just influence the decision; she is the very matrix of consciousness in which the decision is made. She assesses our intentions, weighs the balance of karma, and gives the final verdict that even the Trinity must uphold, for they are themselves manifestations of her power.
 
@@ -40,7 +40,7 @@ Using these incorrect leaves is more than just a botanical error; it is a spirit
 
 ## A Promise to the Goddess: The Weight of a Sacred Vow
 
-![Divine Goddess](https://static.wixstatic.com/media/cddff6_f21c7436fa344eca8ab6833433fc41ef~mv2.png/v1/fill/w_980,h_551,al_c,q_90,enc_auto/cddff6_f21c7436fa344eca8ab6833433fc41ef~mv2.png)
+![Divine Goddess](/assets/uploads/cddff6_f21c7436fa344eca8ab6833433fc41ef.png)
 
 While the Divine Father, Bholenath, is famously forgiving and easily pleased (Ashutosh), the Divine Mother operates on a different plane. This isn't to say she is less compassionate, but that her compassion is fused with an unyielding demand for integrity. She is the upholder of Dharma and Rta—the cosmic order. A promise made to her is not a casual bargain; it is a thread woven into this cosmic fabric. To break it is to introduce a tear, a dissonance that has consequences. This is where the sincerity of a devotee is truly put to the test.
 

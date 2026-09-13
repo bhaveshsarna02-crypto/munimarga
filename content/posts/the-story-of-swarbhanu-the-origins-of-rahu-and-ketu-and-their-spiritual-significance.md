@@ -8,13 +8,13 @@ group: "astrology"
 accent: "#e8b04b"
 read: "8 min"
 excerpt: "Vedic astrology and Hindu mythology, two ancient and interconnected systems, offer a rich tapestry around the origin of the shadow planets and its spiritual significance."
-cover: "https://static.wixstatic.com/media/cddff6_6898f903087f42298dd0d951d099d202~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_6898f903087f42298dd0d951d099d202~mv2.png"
+cover: "/assets/uploads/cddff6_6898f903087f42298dd0d951d099d202.png"
 ---
 ## Introduction
 
 Vedic astrology and Hindu mythology, two ancient and interconnected systems of knowledge, offer a remarkably rich tapestry of symbolism and narrative to help us understand the intricate patterns of life, human psychology, and cosmic influences. Within this vast and profound framework, among the most fascinating and enigmatic figures are Rahu and Ketu. These are not physical celestial bodies like the Sun or Moon, but rather shadow planets (known as chhaya grahas in Sanskrit) or mathematical points in the sky. Despite their non-physical nature, they hold immense astrological and spiritual significance, acting as powerful karmic indicators in an individual's birth chart. Their dramatic origin story traces back to a singular, ambitious asura named Swarbhanu, whose audacious act led to cosmic consequences that continue to reverberate through the destinies of all beings. Understanding their myth is key to unlocking their profound influence on our spiritual journey.
 
-![Rahu and Ketu](https://static.wixstatic.com/media/cddff6_6898f903087f42298dd0d951d099d202~mv2.png/v1/fill/w_860,h_600,al_c,q_85,enc_auto/cddff6_6898f903087f42298dd0d951d099d202~mv2.png)
+![Rahu and Ketu](/assets/uploads/cddff6_6898f903087f42298dd0d951d099d202.png)
 
 ## The Mythological Origins of Rahu and Ketu
 

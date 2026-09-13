@@ -8,13 +8,13 @@ group: "philosophy"
 accent: "#f2b240"
 read: "6 min"
 excerpt: "The yogic view says life moves in a cycle: we come from an absolute condition, we live in a relative one full of change, and we move back toward the absolute again. Whether home matters more than the journey."
-cover: "https://static.wixstatic.com/media/cddff6_c9b27bd0ab50402c87425aafaa381eec~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_c9b27bd0ab50402c87425aafaa381eec~mv2.jpg"
+cover: "/assets/uploads/cddff6_c9b27bd0ab50402c87425aafaa381eec.jpg"
 ---
 ## The Big Question Behind Religion and Yoga
 
 This question asks whether “home” matters more than the “journey.” The yogic view in the quote says life moves in a cycle: we come from an “absolute” condition, we live in a “relative” condition full of change, and we move back toward the absolute again. If you translate that into everyday language, it sounds like this: you start in a kind of unity, you step into the busy marketplace of living, and you eventually return to a deeper stillness. So the question becomes simple to say but hard to settle: do you prefer the quiet, complete, unchanging “absolute,” or do you prefer this messy, moving, human life where everything depends on time, relationships, and choices?
 
-![Peace and oneness, work, love, challenges and joy, inner peace](https://static.wixstatic.com/media/cddff6_7ba45ba847b6464f8dd50c347d0fe855~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,enc_auto/cddff6_7ba45ba847b6464f8dd50c347d0fe855~mv2.jpg)
+![Peace and oneness, work, love, challenges and joy, inner peace](/assets/uploads/cddff6_7ba45ba847b6464f8dd50c347d0fe855.jpg)
 
 ## What “Absolute” and “Relative” Mean in Daily Life
 
@@ -40,7 +40,7 @@ This side pulls you in because it promises relief from the weight of constant ch
 
 This tension becomes clearer when you compare play and rest, not as enemies, but as partners. You can enjoy a festival, yet you still need sleep. You can love conversation, yet you still need silence sometimes. You can love work, yet you still want a day when nobody asks anything from you. Trouble starts when you overdo one side and disrespect the other.
 
-![States of mind and the two common traps associated with them](https://static.wixstatic.com/media/cddff6_95c3a3eafef741e0aceb260fb5681a66~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,enc_auto/cddff6_95c3a3eafef741e0aceb260fb5681a66~mv2.jpg)
+![States of mind and the two common traps associated with them](/assets/uploads/cddff6_95c3a3eafef741e0aceb260fb5681a66.jpg)
 
 ### Trap 1: Treating the Relative as the Only Reality
 

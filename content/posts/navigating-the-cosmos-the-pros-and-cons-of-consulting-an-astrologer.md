@@ -8,9 +8,9 @@ group: "astrology"
 accent: "#e8b04b"
 read: "6 min"
 excerpt: "Astrology as the study of celestial positions interpreted as having an influence on human affairs — and an honest account of what consulting an astrologer can and cannot do."
-cover: "https://static.wixstatic.com/media/cddff6_4f81b79312654c19997e8c6d967d5f41~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_4f81b79312654c19997e8c6d967d5f41~mv2.png"
+cover: "/assets/uploads/cddff6_4f81b79312654c19997e8c6d967d5f41.png"
 ---
-![Astrologers](https://static.wixstatic.com/media/cddff6_4f81b79312654c19997e8c6d967d5f41~mv2.png/v1/fill/w_626,h_626,al_c,q_90,enc_auto/cddff6_4f81b79312654c19997e8c6d967d5f41~mv2.png)
+![Astrologers](/assets/uploads/cddff6_4f81b79312654c19997e8c6d967d5f41.png)
 
 Astrology, the study of the movements and relative positions of celestial bodies interpreted as having an influence on human affairs and the natural world, has been a source of guidance and introspection for millennia. For many, consulting an astrologer offers a unique lens through which to view life's journey, providing insights into personality, relationships, and potential future trends. However, like any practice involving personal interpretation and belief systems, there are various factors to consider before seeking astrological counsel. This article delves into the potential benefits and drawbacks of consulting an astrologer, offering a balanced perspective on what you might expect and how to approach the experience mindfully.
 

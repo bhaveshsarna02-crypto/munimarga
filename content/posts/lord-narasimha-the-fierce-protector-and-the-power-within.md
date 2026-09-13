@@ -8,11 +8,11 @@ group: "gods"
 accent: "#f2b240"
 read: "10 min"
 excerpt: "The fourth and perhaps most dramatic avatar of Vishnu holds a unique place in Hindu thought. The nine forms, and what the fierce form protects."
-cover: "https://static.wixstatic.com/media/cddff6_6530dfda4c644b6ca39423ae29097c03~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_6530dfda4c644b6ca39423ae29097c03~mv2.png"
+cover: "/assets/uploads/cddff6_6530dfda4c644b6ca39423ae29097c03.png"
 ---
 Lord Narasimha, the fourth and perhaps one of the most dramatic avatars of Lord Vishnu, holds a unique and profound place in the Hindu pantheon. Emerging in a terrifying yet ultimately benevolent form – half-man, half-lion – Narasimha embodies the divine's fierce commitment to upholding Dharma and protecting its devotees from the most extreme forms of evil. His appearance is a powerful testament to the idea that the divine will manifest in whatever form is necessary to restore cosmic order and safeguard those who have surrendered to it.
 
-![Lord Narasimha](https://static.wixstatic.com/media/cddff6_6530dfda4c644b6ca39423ae29097c03~mv2.png/v1/fill/w_980,h_686,al_c,q_90,enc_auto/cddff6_6530dfda4c644b6ca39423ae29097c03~mv2.png)
+![Lord Narasimha](/assets/uploads/cddff6_6530dfda4c644b6ca39423ae29097c03.png)
 
 ## The Lion's Roar Against Absolute Evil
 
@@ -75,7 +75,7 @@ Narasimha Kavacham: a Kavacham is an armor or shield. The Narasimha Kavacham is 
 
 ## Prahlada and Hiranyakashipu: A Timeless Narrative of Faith
 
-![Prahlada and Hiranyakashipu](https://static.wixstatic.com/media/cddff6_f18798447be04eb6ba3cc14020cfc60d~mv2.png/v1/fill/w_900,h_1000,al_c,q_85,enc_auto/cddff6_f18798447be04eb6ba3cc14020cfc60d~mv2.png)
+![Prahlada and Hiranyakashipu](/assets/uploads/cddff6_f18798447be04eb6ba3cc14020cfc60d.png)
 
 The story of Prahlada and Hiranyakashipu is a cornerstone of Vaishnava theology and a powerful illustration of unwavering faith, the nature of evil, and the certainty of divine intervention for a true devotee. Hiranyakashipu, driven by hatred for Vishnu, performed severe penance to Brahma and received boons that made him virtually immortal. This power corrupted him entirely, leading him to declare himself the supreme lord and persecute anyone who worshipped Vishnu, especially his own son, Prahlada.
 

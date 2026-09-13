@@ -8,7 +8,7 @@ group: "philosophy"
 accent: "#f2b240"
 read: "8 min"
 excerpt: "Our temples are our anchors. In a world that is changing at a dizzying pace, the turmeric-smeared block under the tree remains a constant. They are the sculptural masterpieces of our souls, and the granite blocks of our very existence."
-cover: "https://static.wixstatic.com/media/cddff6_9237f2682a7e4d3f93dd9d7b3053c024~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_9237f2682a7e4d3f93dd9d7b3053c024~mv2.png"
+cover: "/assets/uploads/cddff6_9237f2682a7e4d3f93dd9d7b3053c024.png"
 ---
 There is a specific, indefinable frequency that hums within the threshold of an Indian temple. It is a vibration that defies the clinical boundaries of “religion” or “theology” as understood in the academic West. It is not merely a place of worship; it is a theatre of the human spirit, a living, breathing ecosystem of absolute vulnerability, a sensory explosion, and a sanctuary where the soul finally exhales.
 
@@ -18,7 +18,7 @@ This sentiment is the heartbeat of the subcontinent. Whether it is the soaring, 
 
 In the eyes of the devotee, the architecture is secondary to the Presence. The true masterpiece is not the stone, but the faith that warms it. Let us walk through the gates together and explore why these spaces remain the most exuberant, chaotic, and profound expressions of the human condition.
 
-![South Indian temple](https://static.wixstatic.com/media/cddff6_9237f2682a7e4d3f93dd9d7b3053c024~mv2.png/v1/fill/w_980,h_552,al_c,q_90,enc_auto/cddff6_9237f2682a7e4d3f93dd9d7b3053c024~mv2.png)
+![South Indian temple](/assets/uploads/cddff6_9237f2682a7e4d3f93dd9d7b3053c024.png)
 
 ## The Architecture of Presence: From Grandeur to the Earth
 
@@ -28,9 +28,9 @@ The grand temples are celestial maps rendered in stone. They are built according
 
 Yet, the “turmeric-smeared block” is perhaps even more intimate, even more potent. These are the Gramadevatas, the village deities. They require no vaulted ceilings, only a bit of shade and the constant remembrance of the people. These simple shrines remind us that the Divine does not require a palace to reside among us. A simple cement platform is enough to hold the weight of a thousand prayers. In these spaces, God is not a distant monarch, but a neighbor—someone you can scold, bargain with, and love. It is a testament to a faith so robust that it does not need ornamentation to feel valid. It needs only a tree, a stone, and a heart willing to bow.
 
-![God under a banyan tree](https://static.wixstatic.com/media/cddff6_e181a039c6524395b797680033e89d50~mv2.png/v1/fill/w_980,h_735,al_c,q_90,enc_auto/cddff6_e181a039c6524395b797680033e89d50~mv2.png)
+![God under a banyan tree](/assets/uploads/cddff6_e181a039c6524395b797680033e89d50.png)
 
-![Mahakaal temple](https://static.wixstatic.com/media/cddff6_32b43892fb5d41809ead5738470a508b~mv2.png/v1/fill/w_980,h_551,al_c,q_90,enc_auto/cddff6_32b43892fb5d41809ead5738470a508b~mv2.png)
+![Mahakaal temple](/assets/uploads/cddff6_32b43892fb5d41809ead5738470a508b.png)
 
 ## The Language of Ritual: Desperate Hope and “Exuberant Ways”
 

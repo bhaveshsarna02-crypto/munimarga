@@ -8,9 +8,9 @@ group: "philosophy"
 accent: "#f2b240"
 read: "6 min"
 excerpt: "The evolution of the Vedic tradition and of Vedic astrology, and the case for its continued relevance."
-cover: "https://static.wixstatic.com/media/cddff6_1e117d141cc54dafb99e26028d87a2fa~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_1e117d141cc54dafb99e26028d87a2fa~mv2.png"
+cover: "/assets/uploads/cddff6_1e117d141cc54dafb99e26028d87a2fa.png"
 ---
-![Evolution of Vedic tradition and Vedic astrology](https://static.wixstatic.com/media/cddff6_dbb14b3f7f714dcdb99251fdb235bd86~mv2.png/v1/fill/w_764,h_575,al_c,q_90,enc_auto/cddff6_dbb14b3f7f714dcdb99251fdb235bd86~mv2.png)
+![Evolution of Vedic tradition and Vedic astrology](/assets/uploads/cddff6_dbb14b3f7f714dcdb99251fdb235bd86.png)
 
 The exploration of the continued relevance of Vedic traditions, specifically Vedic Astrology (Jyotish) and the Vedas, reveals a complex interplay of spiritual, philosophical, and metaphysical ideas that have shaped Hindu thought and continue to be debated today. Jyotish, traditionally viewed as a Vedanga, a “limb of the Veda,” holds an integral role in the Vedic corpus. The Vedas themselves are considered a primary source of spiritual and philosophical knowledge in Hinduism, providing a foundation for understanding the universe and human existence. This article examines the enduring influence of these ancient traditions and their potential significance in the modern world.
 

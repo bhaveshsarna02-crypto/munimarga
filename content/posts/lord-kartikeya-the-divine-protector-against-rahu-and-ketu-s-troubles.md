@@ -8,9 +8,9 @@ group: "gods"
 accent: "#f2b240"
 read: "7 min"
 excerpt: "In the cosmic dance of Vedic astrology, Rahu and Ketu stand out as the enigmatic shadow planets. Where Kartikeya stands in relation to them."
-cover: "https://static.wixstatic.com/media/cddff6_15eb6545c6c24a3b9354911cacd381d0~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_15eb6545c6c24a3b9354911cacd381d0~mv2.png"
+cover: "/assets/uploads/cddff6_15eb6545c6c24a3b9354911cacd381d0.png"
 ---
-![Lord Kartikeya](https://static.wixstatic.com/media/cddff6_7fa6877b853648d89ab7df8e2f1096d0~mv2.png/v1/fill/w_774,h_800,al_c,q_90,enc_auto/cddff6_7fa6877b853648d89ab7df8e2f1096d0~mv2.png)
+![Lord Kartikeya](/assets/uploads/cddff6_7fa6877b853648d89ab7df8e2f1096d0.png)
 
 ## Introduction
 
@@ -52,7 +52,7 @@ During their fierce battle, Surapadman repeatedly used his powers of illusion, t
 
 Ultimately, when Surapadman took the form of a giant mango tree, Kartikeya struck it with his Vel, splitting it into two halves. This act is highly symbolic. The mango tree represents Surapadman's final, most stubborn form of illusion and ego. By splitting it, Kartikeya didn't just destroy the demon; he transformed his very essence. These two halves did not simply vanish; they transformed into a magnificent peacock and a proud rooster. Kartikeya, in an act of profound divine compassion and transformation, took the peacock as his vehicle (vahana) and the rooster as his banner. Placing the rooster on his banner symbolizes not only his complete triumph over Surapadman but also the transformation of the demon's negative energy into something subservient and beneficial to divine will. The peacock, with its beauty and ability to overcome snakes (symbolizing ego and illusion), becomes his mount, signifying control over lower instincts. The rooster, known for announcing the dawn, represents the dispelling of darkness and the arrival of spiritual awakening.
 
-![The peacock and the rooster](https://static.wixstatic.com/media/cddff6_23848271943044d3870b76e79f889440~mv2.png/v1/fill/w_880,h_520,al_c,q_85,enc_auto/cddff6_23848271943044d3870b76e79f889440~mv2.png)
+![The peacock and the rooster](/assets/uploads/cddff6_23848271943044d3870b76e79f889440.png)
 
 Rahu's illusions: Surapadman's mastery of maya directly correlates with Rahu's ability to create illusions, obsessions, and a distorted perception of reality. Kartikeya's ability to pierce these illusions with his Vel signifies his power to grant clarity and discernment, helping individuals see through Rahu's deceptive influences and make clear-headed decisions. Just as Kartikeya saw through Surapadman's many forms, so too can his blessings help one distinguish truth from the illusions Rahu casts, leading to clear decisions and freedom from obsession.
 

@@ -8,7 +8,7 @@ group: "astrology"
 accent: "#e8b04b"
 read: "11 min"
 excerpt: "The Eighth House (Ashtam Bhava) in Vedic astrology is one of the most profound and most misread places in a chart. What it actually asks of a life."
-cover: "https://static.wixstatic.com/media/cddff6_208c1baa51724915893cea96b326cb49~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_208c1baa51724915893cea96b326cb49~mv2.png"
+cover: "/assets/uploads/cddff6_208c1baa51724915893cea96b326cb49.png"
 ---
 Keeping pace with the alchemist's chamber in your life: the Eighth House (Ashtam Bhava) in Vedic astrology is one of the most profound and often misunderstood houses in a birth chart. Far from being solely associated with negativity, it is a powerful domain of transformation, deep research, mysticism, and profound healing. As we delve into its depths, we uncover its miraculous potential and its intricate connection to our spiritual and emotional journeys.
 
@@ -16,7 +16,7 @@ Keeping pace with the alchemist's chamber in your life: the Eighth House (Ashtam
 
 The Eighth House, along with the eighth sign, plays a crucial role in research and development. When you are deeply engaged in research, especially in areas requiring profound investigation, the Eighth House can elevate you to a peak of experience—a state akin to Moksha. This isn't just limited to academic research; even in daily activities like cooking, if you innovate and perfect a dish through continuous experimentation, you're tapping into the energy of the Eighth House. It's about persistent effort, continuous practice, and a relentless pursuit of depth. This relentless pursuit, much like an alchemist's dedicated work in their chamber, ultimately leads to mastery and a sense of absolute knowing.
 
-![The Eighth House transformation cycle: face challenges, gain insights, heal and transform, pursue wisdom](https://static.wixstatic.com/media/cddff6_208c1baa51724915893cea96b326cb49~mv2.png/v1/fill/w_727,h_715,al_c,q_90,enc_auto/cddff6_208c1baa51724915893cea96b326cb49~mv2.png)
+![The Eighth House transformation cycle: face challenges, gain insights, heal and transform, pursue wisdom](/assets/uploads/cddff6_208c1baa51724915893cea96b326cb49.png)
 
 At its core, the Eighth House is the realm of mysticism, divine connections, and divine experiences. It governs those subtle, often ineffable experiences that transcend ordinary perception. If the Eighth House is well-placed in a birth chart, the sufferings or challenges associated with it are often healed through divine intervention or spiritual insights. This house is also intrinsically linked to Siddhis—spiritual powers or attainments. The ancient sages and seers achieved their siddhis by activating the energy of this house. It grants the power to overcome deep-seated insecurities and fears, transforming them into strengths. Specifically, Ketu, Saturn, and the Sun in the Eighth House can indicate natural siddhis, often inherited from past lives or lineage, or developed through intense self-research in this lifetime. These individuals possess a unique ability to guide others through their problems, acting as great solution providers through their profound wisdom and sustained sadhanas, be it as a scientist dedicated to research or an astrologer delving into daily charts.
 
@@ -26,7 +26,7 @@ In an increasingly automated world where technology simplifies tasks, our emotio
 
 The Eighth House governs our deep, hidden desires, traumas, and unexpressed emotions. It's the place where we seek solutions for feelings that cannot be easily articulated to others. Many people experience phenomena that defy practical explanation—vivid, prophetic dreams, powerful spiritual experiences during meditation, or strange encounters that they cannot share with others for fear of being misunderstood. These extraordinary things that are purely a matter of experience often stem from an activated Eighth House. Such experiences are deeply psychological and emotional; unlike physical injuries, their impact is unseen but profoundly felt. The Eighth House helps explain these occurrences and offers avenues for healing and integrating such intense emotional and traumatic experiences. Whether through Akashic records, astrology, numerology, spiritual practices, or tantra, the Eighth House provides the framework through which these profound shifts occur, guiding one from darkness to light.
 
-![The Eighth House: pros and cons at a glance](https://static.wixstatic.com/media/cddff6_3d9c030a775048da945631f721969524~mv2.png/v1/fill/w_781,h_638,al_c,q_90,enc_auto/cddff6_3d9c030a775048da945631f721969524~mv2.png)
+![The Eighth House: pros and cons at a glance](/assets/uploads/cddff6_3d9c030a775048da945631f721969524.png)
 
 ## Planetary Placements in the Eighth House
 

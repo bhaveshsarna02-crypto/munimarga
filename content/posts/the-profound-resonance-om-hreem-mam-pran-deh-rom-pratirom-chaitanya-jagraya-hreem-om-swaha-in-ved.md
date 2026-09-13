@@ -8,13 +8,13 @@ group: "mantra"
 accent: "#6ab2a0"
 read: "9 min"
 excerpt: "A conceptual explanation of the mantra \"Om Hreem Mam Pran Deh Rom Pratirom Chaitanya Jagraya Hreem Om Swaha\" in the context of Vedic astrology."
-cover: "https://static.wixstatic.com/media/cddff6_0cd99851a63044388bb7b9928d46d2ae~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_0cd99851a63044388bb7b9928d46d2ae~mv2.png"
+cover: "/assets/uploads/cddff6_0cd99851a63044388bb7b9928d46d2ae.png"
 ---
 Disclaimer: this article provides a conceptual explanation of the mantra “Om Hreem Mam Pran Deh Rom Pratirom Chaitanya Jagraya Hreem Om Swaha” in the context of Vedic Astrology. This information is for educational purposes only and is not intended as a substitute for traditional spiritual guidance. For the proper and effective practice of this or any mantra, it is highly recommended to seek initiation from a qualified Guru, as initiation is crucial for receiving the mantra's full energetic transmission and benefits.
 
 In the intricate tapestry of Vedic Astrology, mantras transcend mere linguistic expressions; they are considered vibrational keys, capable of unlocking specific cosmic energies and awakening dormant consciousness within the individual. The mantra stands as a profound invocation designed to ignite and enliven the vital life force, or Prana, within every single cell, tissue, and subtle energetic fiber of one's entire being. This article delves into an elaborated understanding of this powerful mantra, exploring its individual components and its far-reaching implications within the framework of Vedic Astrology.
 
-![The nine stages of mantra-driven awakening](https://static.wixstatic.com/media/cddff6_0cd99851a63044388bb7b9928d46d2ae~mv2.png/v1/fill/w_952,h_698,al_c,q_90,enc_auto/cddff6_0cd99851a63044388bb7b9928d46d2ae~mv2.png)
+![The nine stages of mantra-driven awakening](/assets/uploads/cddff6_0cd99851a63044388bb7b9928d46d2ae.png)
 
 ## Decoding the Sacred Syllables
 

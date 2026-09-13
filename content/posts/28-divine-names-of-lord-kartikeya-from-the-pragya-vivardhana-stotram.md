@@ -8,11 +8,11 @@ group: "gods"
 accent: "#f2b240"
 read: "3 min"
 excerpt: "Lord Kartikeya — also known as Skanda, Murugan or Subrahmanya — revered for his valor. The twenty-eight names, and what each one names."
-cover: "https://static.wixstatic.com/media/cddff6_4d7e40e091504e12836747f341eca00e~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_4d7e40e091504e12836747f341eca00e~mv2.png"
+cover: "/assets/uploads/cddff6_4d7e40e091504e12836747f341eca00e.png"
 ---
 ## Introduction
 
-![Lord Kartikeya](https://static.wixstatic.com/media/cddff6_4d7e40e091504e12836747f341eca00e~mv2.png/v1/fill/w_800,h_580,al_c,q_90,enc_auto/cddff6_4d7e40e091504e12836747f341eca00e~mv2.png)
+![Lord Kartikeya](/assets/uploads/cddff6_4d7e40e091504e12836747f341eca00e.png)
 
 Lord Kartikeya, also known as Skanda, Murugan, or Subrahmanya, is a prominent deity in Hinduism revered for his valor, wisdom, and leadership. While he is widely worshipped across South India and by Tamil communities worldwide, a lesser-known stotram dedicated to him, the Pragya Vivardhana Stotram, presents 28 sacred names that extol his virtues. The term “Pragya Vivardhana” means “that which enhances wisdom or intelligence.” True to its name, this stotram is believed to bless devotees with eloquence, sharp intellect, and spiritual insight.
 

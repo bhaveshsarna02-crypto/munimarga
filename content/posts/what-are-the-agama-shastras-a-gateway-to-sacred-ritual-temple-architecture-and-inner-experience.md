@@ -8,11 +8,11 @@ group: "agama"
 accent: "#f2b240"
 read: "7 min"
 excerpt: "The Agama Shastras are a profound body of ancient scriptures that serve as the foundational texts for ritual, temple architecture and inner experience."
-cover: "https://static.wixstatic.com/media/cddff6_fd0fc09ce6d646d5b3fed8b1c5d89b23~mv2.png/v1/fill/w_900,h_600,al_c,q_85,enc_auto/cddff6_fd0fc09ce6d646d5b3fed8b1c5d89b23~mv2.png"
+cover: "/assets/uploads/cddff6_fd0fc09ce6d646d5b3fed8b1c5d89b23.png"
 ---
 ## Introduction
 
-![The temple as cosmic man (Vaastu Purusha)](https://static.wixstatic.com/media/cddff6_a56142e214e2485aa5b1bd1e8d89f85a~mv2.png/v1/fill/w_980,h_755,al_c,q_90,enc_auto/cddff6_a56142e214e2485aa5b1bd1e8d89f85a~mv2.png)
+![The temple as cosmic man (Vaastu Purusha)](/assets/uploads/cddff6_a56142e214e2485aa5b1bd1e8d89f85a.png)
 
 The Agama Shastras are a profound body of ancient scriptures that serve as the foundational texts for a vast array of spiritual practices within Hinduism. Far from being mere supplementary texts, they hold a status of equal spiritual and practical significance to the Vedas, particularly in the realms of daily worship (puja), elaborate temple construction, and the intricate inner journey of the spiritual practitioner. While the Vedas primarily delve into profound philosophical truths, cosmic principles, and the performance of grand sacrificial rituals (yajna) aimed at cosmic harmony, the Agamas provide the detailed, systematic, and actionable frameworks that guide how these abstract truths are to be lived, experienced, and manifested through concrete ritual, sacred art, and disciplined yogic practices. They bridge the gap between theoretical knowledge and practical application, making the divine accessible and tangible through structured methodologies.
 
@@ -54,7 +54,7 @@ This fourfold structure ensures that the Agamas are not merely external manuals 
 
 One of the most profound and visible impacts of the Agama Shastras is their pervasive influence on Hindu temple architecture and daily worship. Every aspect of a traditional Hindu temple, from its foundational layout to its towering spire, is meticulously designed and consecrated according to Agamic principles.
 
-![Temple layout according to Agamic principles](https://static.wixstatic.com/media/cddff6_fd0fc09ce6d646d5b3fed8b1c5d89b23~mv2.png/v1/fill/w_900,h_476,al_c,q_85,enc_auto/cddff6_fd0fc09ce6d646d5b3fed8b1c5d89b23~mv2.png)
+![Temple layout according to Agamic principles](/assets/uploads/cddff6_fd0fc09ce6d646d5b3fed8b1c5d89b23.png)
 
 Architectural blueprint: the Agamas provide precise guidelines for the orientation of the temple (often east-facing), its dimensions, proportions, and the symbolic significance of each architectural element. The central shrine, known as the garbhagriha (womb-house), is the most sacred space, housing the principal deity. The shikhara (spire) or vimana (tower) above the garbhagriha symbolizes the cosmic mountain or the ascent to the divine. The mandapas (halls) leading to the sanctum, the gopurams (ornate gateway towers), and the surrounding courtyards are all laid out with specific Agamic prescriptions, creating a microcosm of the cosmos designed to facilitate spiritual experience. Even the rituals performed during the various stages of construction, from the selection of the site to the final consecration, are elaborately codified in these texts, ensuring the temple is imbued with sacred energy. The diagram illustrates the profound symbolic connection between the human body and the temple structure, a concept central to Agamic architecture: the temple as a cosmic man (Vaastu Purusha), where each part of the temple corresponds to a specific limb or energy center of the human form.
 
