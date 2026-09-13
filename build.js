@@ -72,6 +72,14 @@ const ACCENT = { astrology: "#e8b04b", philosophy: "#f2b240", practice: "#6ab2a0
 rmrf(OUT);
 fs.mkdirSync(OUT, { recursive: true });
 copyDir(path.join(ROOT, "static"), OUT);
+
+// images committed at the repo root get filed into assets/uploads/
+const upl = path.join(OUT, "assets", "uploads");
+fs.mkdirSync(upl, { recursive: true });
+for (const e of fs.readdirSync(ROOT, { withFileTypes: true })) {
+  if (!e.isFile() || !/\.(png|jpe?g|webp|gif|svg)$/i.test(e.name)) continue;
+  fs.copyFileSync(path.join(ROOT, e.name), path.join(upl, e.name));
+}
 copyDir(path.join(ROOT, "admin"), path.join(OUT, "admin"));
 fs.mkdirSync(path.join(OUT, "content"), { recursive: true });
 
