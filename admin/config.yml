@@ -1,0 +1,84 @@
+backend:
+  name: github
+  repo: bhaveshsarna02-crypto/munimarga
+  branch: main
+  # Set this to your deployed sveltia-cms-auth worker URL, e.g.
+  # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+  base_url: REPLACE_WITH_AUTH_WORKER_URL
+
+media_folder: static/assets/uploads
+public_folder: /assets/uploads
+
+site_url: https://munimarga.in
+display_url: https://munimarga.in
+logo_url: https://munimarga.in/assets/muni-mark.svg
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [published, title]
+    view_groups:
+      - label: Strand
+        field: group
+    fields:
+      - { name: title, label: Title, widget: string }
+
+      - name: published
+        label: Date
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
+
+      - name: group
+        label: Strand
+        widget: select
+        default: philosophy
+        options:
+          - { label: "Astrology — chart reading", value: astrology }
+          - { label: "Philosophy — the source texts", value: philosophy }
+          - { label: "Practice — what to do", value: practice }
+
+      - name: tag
+        label: Label shown on the card
+        widget: select
+        default: Philosophy
+        options: [Astrology, Philosophy, Practice]
+
+      - name: excerpt
+        label: Excerpt
+        hint: Two or three sentences. Shown on the Writing page and in Google results.
+        widget: text
+
+      - name: cover
+        label: Cover image
+        widget: image
+        required: false
+        hint: Landscape. Shown on the card and at the top of the post.
+
+      - name: read
+        label: Reading time
+        widget: string
+        required: false
+        hint: Leave empty and it is calculated from the word count.
+
+      - name: draft
+        label: Draft — keep off the site
+        widget: boolean
+        default: false
+        required: false
+
+      - name: body
+        label: Body
+        widget: markdown
+        hint: "## for a section heading, ### for a sub-heading, > for a pull quote. For Sanskrit use a code block with the language set to verse."
+        modes: [rich_text, raw]
+        buttons: [bold, italic, quote, bulleted-list, numbered-list]
+        editor_components: [image, code-block]

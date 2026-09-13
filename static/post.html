@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" href="assets/muni-favicon-64.png" />
+<title>Writing — Muni</title>
+<meta name="description" content="Essays on Vedic astrology and Indian philosophy from Muni." />
+<link rel="canonical" href="https://munimarga.in/post" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Muni" />
+<meta property="og:title" content="Writing — Muni" />
+<meta property="og:description" content="Essays on Vedic astrology and Indian philosophy from Muni." />
+<meta property="og:url" content="https://munimarga.in/post" />
+<meta property="og:image" content="https://munimarga.in/assets/muni-lockup.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Writing — Muni" />
+<meta name="twitter:description" content="Essays on Vedic astrology and Indian philosophy from Muni." />
+<meta name="twitter:image" content="https://munimarga.in/assets/muni-lockup.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #0d0f24; color: #f2ece1; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #e8b04b; text-decoration: none; }
+  a:hover { color: #f6cd85; }
+  ::selection { background: #e8b04b; color: #0d0f24; }
+</style>
+</helmet>
+<div style="font-family: 'Spectral', Georgia, serif; background: #0d0f24; overflow-x: hidden">
+
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px clamp(20px, 5vw, 64px); background: #0f1128; border-bottom: 1px solid rgba(242,236,225,0.09)">
+    <a href="index.html" style="display: flex; align-items: baseline; gap: 10px; color: #e8b04b">
+      <img src="assets/muni-avatar-256.png" alt="" style="width: 34px; height: 34px; border-radius: 50%; flex: 0 0 auto; align-self: center" />
+      <span style="font-family: 'Marcellus', serif; font-size: 22px; letter-spacing: 0.26em; text-transform: uppercase; background: linear-gradient(100deg, #f6cd85, #e8b04b 42%, #c98a2c 100%); -webkit-background-clip: text; background-clip: text; color: transparent">Muni</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #cfa048">munimarga.in</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(14px, 2.2vw, 30px); flex-wrap: wrap; justify-content: flex-end">
+      <a href="writing.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,236,225,0.88)" style-hover="color: #f2ece1">All writing</a>
+      <a href="about.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,236,225,0.88)" style-hover="color: #f2ece1">About</a>
+      <dc-import name="DonateButton" upi-id="9999985843@upi" payee-name="Muni" paypal-email="satyendrasarna@gmail.com" hint-size="118px,38px"></dc-import>
+      <a href="readings.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; display: inline-flex; align-items: center; white-space: nowrap; padding: 9px 16px; border: 1px solid #e8b04b; border-radius: 2px; color: #e8b04b" style-hover="background: #e8b04b; color: #0d0f24">Book a reading</a>
+    </nav>
+  </header>
+
+  <article style="position: relative; padding: clamp(44px, 7vw, 84px) clamp(20px, 5vw, 64px) clamp(40px, 6vw, 72px)">
+    <div style="position: absolute; top: -200px; left: 40%; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(232,176,75,0.14), rgba(232,176,75,0) 66%); pointer-events: none"></div>
+    <div style="position: relative; max-width: 760px; margin: 0 auto">
+      <sc-if value="{{ hasCover }}" hint-placeholder-val="{{ false }}">
+        <div style="margin: 0 0 30px; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(242,236,225,0.12); background: #15183a">{{ coverEl }}</div>
+      </sc-if>
+      <p style="margin: 0 0 18px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #e8b04b">{{ meta }}</p>
+      <h1 style="margin: 0 0 26px; font-family: 'Marcellus', serif; font-weight: 400; font-size: clamp(30px, 4.4vw, 52px); line-height: 1.1; text-wrap: pretty">{{ title }}</h1>
+      <p style="margin: 0 0 40px; padding-bottom: 30px; border-bottom: 1px solid rgba(242,236,225,0.14); font-size: clamp(17px, 1.5vw, 20px); line-height: 1.6; color: rgba(242,236,225,0.9); font-style: italic; text-wrap: pretty">{{ excerpt }}</p>
+
+      <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="6">
+        <div style="margin: 0 0 22px">
+          <sc-if value="{{ b.isH2 }}" hint-placeholder-val="{{ false }}">
+            <h2 style="margin: 44px 0 18px; font-family: 'Marcellus', serif; font-weight: 400; font-size: clamp(23px, 2.6vw, 31px); line-height: 1.2; color: #f6cd85; text-wrap: pretty">{{ b.text }}</h2>
+          </sc-if>
+          <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}">
+            <p style="margin: 0; font-size: 18px; line-height: 1.78; color: rgba(242,236,225,0.93); text-wrap: pretty">{{ b.text }}</p>
+          </sc-if>
+          <sc-if value="{{ b.isQuote }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 34px 0; padding: 22px 26px; border-left: 2px solid #e8b04b; background: rgba(232,176,75,0.06); font-family: 'Marcellus', serif; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.45; color: #f6cd85; text-wrap: pretty">{{ b.text }}</p>
+          </sc-if>
+          <sc-if value="{{ b.isVerse }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 30px 0; padding: 24px 26px; border: 1px solid rgba(232,176,75,0.3); background: rgba(232,176,75,0.05); font-size: 17px; line-height: 2; color: rgba(242,236,225,0.96); white-space: pre-line">{{ b.text }}</p>
+          </sc-if>
+          <sc-if value="{{ b.isH3 }}" hint-placeholder-val="{{ false }}">
+            <h3 style="margin: 34px 0 14px; font-family: 'Marcellus', serif; font-weight: 400; font-size: clamp(19px, 2.1vw, 24px); line-height: 1.26; color: rgba(242,236,225,0.96); text-wrap: pretty">{{ b.text }}</h3>
+          </sc-if>
+          <sc-if value="{{ b.isPhoto }}" hint-placeholder-val="{{ false }}">
+            <figure style="margin: 36px 0">
+              <div style="aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(242,236,225,0.12); background: #15183a">{{ b.photoEl }}</div>
+              <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242,236,225,0.62)">{{ b.text }}</figcaption>
+            </figure>
+          </sc-if>
+          <sc-if value="{{ b.isImg }}" hint-placeholder-val="{{ false }}">
+            <figure style="margin: 36px 0">
+              <div style="aspect-ratio: 16 / 9; background-color: #15183a; background-image: repeating-linear-gradient(-45deg, rgba(242,236,225,0.06) 0 1px, transparent 1px 10px); border: 1px solid rgba(242,236,225,0.12); display: flex; align-items: flex-end; padding: 14px">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(242,236,225,0.66)">image · {{ b.text }}</span>
+              </div>
+            </figure>
+          </sc-if>
+        </div>
+      </sc-for>
+
+      <sc-if value="{{ missing }}" hint-placeholder-val="{{ false }}">
+        <div style="padding: 26px; border: 1px solid rgba(232,176,75,0.35); background: rgba(232,176,75,0.05)">
+          <p style="margin: 0 0 16px; font-size: 17px; line-height: 1.7; color: rgba(242,236,225,0.92)">This piece has not been moved into the new design yet. You can read it on the current site in the meantime.</p>
+          <a href="{{ href }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase">Read it on aumastrovisions.com →</a>
+        </div>
+      </sc-if>
+    </div>
+  </article>
+
+  <section style="padding: clamp(40px, 6vw, 76px) clamp(20px, 5vw, 64px); background: #0a0c1d; border-top: 1px solid rgba(242,236,225,0.09)">
+    <div style="max-width: 1180px; margin: 0 auto">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 26px">
+        <h2 style="margin: 0; font-family: 'Marcellus', serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 32px)">Keep reading</h2>
+        <a href="writing.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase">All writing →</a>
+      </div>
+      <div style="display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
+          <a href="{{ r.href }}" style="display: flex; flex-direction: column; border: 1px solid rgba(242,236,225,0.13); background: #101230; color: #f2ece1; padding: 24px 22px" style-hover="border-color: rgba(232,176,75,0.5)">
+            <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #e8b04b">{{ r.tag }} · {{ r.read }}</p>
+            <h3 style="margin: 0 0 10px; font-family: 'Marcellus', serif; font-weight: 400; font-size: 19px; line-height: 1.24; text-wrap: pretty">{{ r.title }}</h3>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: rgba(242,236,225,0.82)">{{ r.date }}</p>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: clamp(36px, 5vw, 60px) clamp(20px, 5vw, 64px) 40px; border-top: 1px solid rgba(242,236,225,0.09)">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: baseline; justify-content: space-between">
+      <a href="writing.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase">← All writing</a>
+      <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: rgba(242,236,225,0.62)">© 2026 Muni · munimarga.in</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const INDEX = [
+  { slug: "the-soul-of-the-stone-a-meditation-on-indian-temples", title: "The Soul of the Stone: A Meditation on Indian Temples", tag: "Philosophical Reflections", read: "8 min", date: "11 Feb", excerpt: "Our temples are our anchors. In a world that is changing at a dizzying pace, the turmeric-smeared block under the tree remains a constant." },
+  { slug: "absolute-vs-relative-which-life-is-better", title: "Absolute vs Relative: Which Life Is Better?", tag: "Philosophical Reflections", read: "6 min", date: "16 Jan", excerpt: "The yogic view says life moves in a cycle: from an absolute condition, into a relative one full of change, and back again." },
+  { slug: "the-divine-mother-why-the-goddess-s-word-is-law-in-hinduism", title: "The Divine Mother: Why the Goddess's Word is Law in Hinduism", tag: "Gods and Goddesses", read: "12 min", date: "30 Aug 2025", excerpt: "The significance of the Divine Mother (Adi Shakti), why her word is final, and the power of sincere devotion." },
+  { slug: "crisis-modern-astrology-remedies", title: "The Crisis in Modern Astrology: Why Quick-Fix Remedies Are Failing You", tag: "Astrology", read: "7 min", date: "30 Aug 2025", excerpt: "The difference between quick fixes and authentic Vedic wisdom in understanding the true purpose of your birth chart." }
+];
+
+class Component extends DCLogic {
+  state = { blocks: null, loaded: false };
+
+  get slug() {
+    try {
+      const q = new URLSearchParams(window.location.search).get("p");
+      return q || INDEX[0].slug;
+    } catch (e) { return INDEX[0].slug; }
+  }
+
+  applySeo(post, slug) {
+    try {
+      const site = "https://munimarga.in";
+      const wanted = post.title + " — Muni";
+      this._wantedTitle = wanted;
+      const claim = () => {
+        let t = document.head.querySelector("title#muni-title");
+        if (!t) {
+          document.head.querySelectorAll("title").forEach(el => el.remove());
+          t = document.createElement("title"); t.id = "muni-title"; document.head.appendChild(t);
+        }
+        if (t.textContent !== this._wantedTitle) t.textContent = this._wantedTitle;
+        if (document.title !== this._wantedTitle) document.title = this._wantedTitle;
+      };
+      claim();
+      requestAnimationFrame(claim);
+      setTimeout(claim, 0);
+      setTimeout(claim, 400);
+      const set = (sel, attr, val) => {
+        let el = document.head.querySelector(sel);
+        if (!el) { el = document.createElement(sel.startsWith("link") ? "link" : "meta"); document.head.appendChild(el);
+          if (sel.includes("property=")) el.setAttribute("property", sel.match(/property="([^"]+)"/)[1]);
+          else if (sel.includes("name=")) el.setAttribute("name", sel.match(/name="([^"]+)"/)[1]);
+          else if (sel.startsWith("link")) el.setAttribute("rel", "canonical"); }
+        el.setAttribute(attr, val);
+      };
+      set('meta[name="description"]', "content", post.excerpt || "");
+      set('meta[property="og:title"]', "content", post.title);
+      set('meta[property="og:description"]', "content", post.excerpt || "");
+      set('meta[property="og:type"]', "content", "article");
+      set('meta[property="og:url"]', "content", site + "/post?p=" + slug);
+      set('meta[name="twitter:title"]', "content", post.title);
+      set('meta[name="twitter:description"]', "content", post.excerpt || "");
+      if (post.cover) { set('meta[property="og:image"]', "content", post.cover); set('meta[name="twitter:image"]', "content", post.cover); }
+      set('link[rel="canonical"]', "href", site + "/post?p=" + slug);
+      let ld = document.getElementById("ld-article");
+      if (!ld) { ld = document.createElement("script"); ld.type = "application/ld+json"; ld.id = "ld-article"; document.head.appendChild(ld); }
+      ld.textContent = JSON.stringify({
+        "@context": "https://schema.org", "@type": "Article",
+        headline: post.title, description: post.excerpt || "",
+        image: post.cover || undefined, articleSection: post.tag,
+        author: { "@type": "Person", name: "Muni" },
+        publisher: { "@type": "Organization", name: "Muni", url: site },
+        mainEntityOfPage: site + "/post?p=" + slug
+      });
+    } catch (e) {}
+  }
+
+  componentDidMount() {
+    import("./blog-index.js")
+      .then(m => { if (m.POSTS && m.POSTS.length) INDEX.splice(0, INDEX.length, ...m.POSTS);
+        const post = INDEX.find(x => x.slug === this.slug); if (post) this.applySeo(post, this.slug);
+        this.forceUpdate(); })
+      .catch(() => {});
+    fetch("content/" + this.slug + ".json")
+      .then(r => { if (!r.ok) throw new Error("no built content"); return r.json(); })
+      .then(blocks => this.setState({ blocks, loaded: true }))
+      .catch(() => import("./blog-content.js")
+        .then(m => this.setState({ blocks: (m.CONTENT || {})[this.slug] || null, loaded: true }))
+        .catch(() => this.setState({ loaded: true })));
+  }
+
+  renderVals() {
+    const slug = this.slug;
+    const post = INDEX.find(p => p.slug === slug) || { title: "Post not found", tag: "Writing", date: "", read: "", excerpt: "This piece is not in the index. It may still be on the current site." };
+    const blocks = this.state.blocks || [];
+    return {
+      title: post.title,
+      hasCover: !!post.cover,
+      coverEl: post.cover ? React.createElement("img", { src: post.cover, alt: "", style: { width: "100%", height: "100%", objectFit: "cover", filter: "saturate(0.74) contrast(1.04) brightness(0.92)" } }) : null,
+      excerpt: post.excerpt,
+      meta: [post.tag, post.date, post.read ? post.read + " read" : ""].filter(Boolean).join(" · "),
+      href: `https://www.aumastrovisions.com/post/${slug}`,
+      blocks: blocks.map(b => ({
+        text: b.text,
+        photoEl: b.src ? React.createElement("img", { src: b.src, alt: b.text || "", style: { width: "100%", height: "100%", objectFit: "cover", filter: "saturate(0.78) contrast(1.03) brightness(0.94)" } }) : null,
+        isP: b.k === "p",
+        isH2: b.k === "h2",
+        isH3: b.k === "h3",
+        isVerse: b.k === "verse",
+        isQuote: b.k === "quote",
+        isPhoto: b.k === "img" && !!b.src,
+        isImg: b.k === "img" && !b.src
+      })),
+      missing: this.state.loaded && blocks.length === 0,
+      related: (() => {
+        const others = INDEX.filter(p => p.slug !== slug);
+        const same = others.filter(p => p.tag === post.tag);
+        return same.concat(others.filter(p => p.tag !== post.tag)).slice(0, 3).map(p => ({
+          ...p, href: `post.html?p=${p.slug}`
+        }));
+      })()
+    };
+  }
+}
+</script>
+</body>
+</html>
