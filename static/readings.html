@@ -286,23 +286,46 @@
           <button onClick="{{ closeAdmin }}" style="padding: 11px 18px; background: transparent; border: 1px solid rgba(242,236,225,0.25); color: #f2ece1; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer" style-hover="border-color: #e8b04b; color: #e8b04b">Close</button>
         </div>
 
-        <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.6; color: rgba(242,236,225,0.88)">Weekly hours, in your own IST times. Tick the slots you normally take calls in — clients only ever see these, converted to their local time zone.</p>
+        <p style="margin: 0 0 18px; max-width: 64ch; font-size: 15px; line-height: 1.6; color: rgba(242,236,225,0.88)">Weekly hours, all 24 of them, on your own clock. When you travel, change "I am in" — the ticked hours stay the same on your new local clock. Clients see them converted to theirs, with IST alongside.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px">
+          <label for="adminTz" style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,236,225,0.76)">I am in</label>
+          <select id="adminTz" value="{{ adminTz }}" onChange="{{ setAdminTz }}" style="padding: 10px 12px; background: #0d0f24; border: 1px solid rgba(242,236,225,0.2); color: #f2ece1; font-family: 'IBM Plex Mono', monospace; font-size: 12px; border-radius: 2px">
+            <sc-for list="{{ zoneOptions }}" as="z" hint-placeholder-count="6">
+              <option value="{{ z.id }}">{{ z.label }}</option>
+            </sc-for>
+          </select>
+          <button onClick="{{ presetEvenings }}" style="padding: 10px 14px; background: transparent; border: 1px solid rgba(242,236,225,0.25); color: #f2ece1; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer" style-hover="border-color: #e8b04b; color: #e8b04b">Weekday evenings 17–21</button>
+          <button onClick="{{ clearHours }}" style="padding: 10px 14px; background: transparent; border: 1px solid rgba(242,236,225,0.25); color: #f2ece1; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer" style-hover="border-color: #e8b04b; color: #e8b04b">Clear all</button>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #e8b04b">{{ openHoursLabel }}</span>
+        </div>
         <div style="overflow-x: auto; border: 1px solid rgba(242,236,225,0.14)">
-          <div style="min-width: 560px">
-            <div style="display: grid; grid-template-columns: 96px repeat(6, 1fr); background: rgba(242,236,225,0.05)">
-              <span style="padding: 12px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(242,236,225,0.72)">Day</span>
-              <sc-for list="{{ slotTimes }}" as="t" hint-placeholder-count="6">
-                <span style="padding: 12px 6px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(242,236,225,0.72)">{{ t }}</span>
+          <div style="min-width: 640px">
+            <div style="display: grid; grid-template-columns: 120px repeat(7, 1fr); background: rgba(242,236,225,0.05)">
+              <span style="padding: 10px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(242,236,225,0.72)">Hour · IST</span>
+              <sc-for list="{{ adminDays }}" as="d" hint-placeholder-count="7">
+                <span style="padding: 10px 4px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(242,236,225,0.9)">{{ d }}</span>
               </sc-for>
             </div>
-            <sc-for list="{{ adminRows }}" as="row" hint-placeholder-count="7">
-              <div style="display: grid; grid-template-columns: 96px repeat(6, 1fr); border-top: 1px solid rgba(242,236,225,0.1)">
-                <span style="padding: 12px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(242,236,225,0.9)">{{ row.day }}</span>
-                <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="6">
-                  <button onClick="{{ c.onClick }}" style="margin: 6px; padding: 10px 4px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; background: {{ c.bg }}; border: 1px solid {{ c.border }}; color: {{ c.fg }}">{{ c.label }}</button>
+            <sc-for list="{{ adminRows }}" as="row" hint-placeholder-count="24">
+              <div style="display: grid; grid-template-columns: 120px repeat(7, 1fr); border-top: 1px solid rgba(242,236,225,0.08)">
+                <span style="display: flex; gap: 8px; align-items: center; padding: 4px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(242,236,225,0.9)">{{ row.label }}<span style="font-size: 9px; color: rgba(242,236,225,0.55)">{{ row.ist }}</span></span>
+                <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="7">
+                  <button onClick="{{ c.onClick }}" title="{{ c.title }}" style="margin: 3px; padding: 6px 2px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.08em; background: {{ c.bg }}; border: 1px solid {{ c.border }}; color: {{ c.fg }}">{{ c.label }}</button>
                 </sc-for>
               </div>
             </sc-for>
+          </div>
+        </div>
+
+        <div style="margin-top: 22px; padding: 18px 20px; border: 1px dashed rgba(232,176,75,0.45); background: rgba(232,176,75,0.04); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+          <div style="min-width: 0; max-width: 62ch">
+            <p style="margin: 0 0 6px; font-family: 'Marcellus', serif; font-size: 18px">{{ publishHeading }}</p>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: rgba(242,236,225,0.82)">Changes here show only on this device until published. Copy, open the file on GitHub, select all, paste, commit. The site updates in about a minute.</p>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap">
+            <button onClick="{{ discardDraft }}" style="padding: 11px 18px; background: transparent; border: 1px solid rgba(242,236,225,0.25); color: #f2ece1; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer" style-hover="border-color: #e8b04b; color: #e8b04b">Discard changes</button>
+            <button onClick="{{ copyAvailability }}" style="padding: 11px 18px; background: #e8b04b; color: #0d0f24; border: none; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer">{{ copyLabel }}</button>
+            <a href="https://github.com/bhaveshsarna02-crypto/munimarga/edit/main/static/availability.json" target="_blank" rel="noopener" style="padding: 11px 18px; border: 1px solid rgba(242,236,225,0.25); color: #f2ece1; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none" style-hover="border-color: #e8b04b; color: #e8b04b">Open on GitHub ↗</a>
           </div>
         </div>
 
@@ -356,7 +379,27 @@
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;upiId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;9999985843@upi&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;payeeName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Muni&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;paypalEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;satyendrasarna@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;priceInr&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:6000,&quot;min&quot;:0,&quot;max&quot;:100000,&quot;step&quot;:500,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;priceUsd&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:96,&quot;min&quot;:0,&quot;max&quot;:2000,&quot;step&quot;:4,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;slotTimes&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;string[]&quot;}}">
-const SLOTS = ["10:00", "11:30", "14:00", "16:00", "18:00", "20:00"];
+const SLOTS = Array.from({ length: 24 }, (_, h) => String(h).padStart(2, "0") + ":00");
+const ZONES = [
+  ["Europe/Helsinki", "Finland · Helsinki"], ["Asia/Kolkata", "India · IST"], ["Europe/London", "UK · London"],
+  ["Europe/Berlin", "Central Europe"], ["Europe/Stockholm", "Sweden · Stockholm"], ["America/New_York", "US East"],
+  ["America/Los_Angeles", "US West"], ["Asia/Singapore", "Singapore"], ["Asia/Tokyo", "Japan"], ["Australia/Sydney", "Australia · Sydney"]
+];
+const EVENINGS = ["17:00", "18:00", "19:00", "20:00"];
+function tzOffsetMin(tz, ms) {
+  const p = {};
+  new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" })
+    .formatToParts(new Date(ms)).forEach(x => { p[x.type] = x.value; });
+  return (Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute, +p.second) - ms) / 60000;
+}
+function zonedInstant(iso, hhmm, tz) {
+  const [Y, M, D] = iso.split("-").map(Number), [h, mi] = hhmm.split(":").map(Number);
+  const guess = Date.UTC(Y, M - 1, D, h, mi);
+  let ms = guess - tzOffsetMin(tz, guess) * 60000;
+  ms = guess - tzOffsetMin(tz, ms) * 60000;
+  return new Date(ms);
+}
+const fmtIn = (d, tz) => d.toLocaleTimeString("en-GB", { timeZone: tz, hour: "2-digit", minute: "2-digit" });
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const LS = "aav-booking-v1";
 
@@ -376,35 +419,44 @@ class Component extends DCLogic {
       sent: false,
       adminOpen: false,
       blockDraft: "",
-      template: {
-        0: [], 1: ["11:30", "18:00", "20:00"], 2: ["11:30", "18:00", "20:00"],
-        3: ["10:00", "11:30", "18:00"], 4: ["11:30", "18:00", "20:00"],
-        5: ["10:00", "11:30", "16:00"], 6: ["10:00", "11:30", "14:00", "16:00"]
-      },
+      copied: false,
+      tz: "Europe/Helsinki",
+      template: { 0: [], 1: EVENINGS, 2: EVENINGS, 3: EVENINGS, 4: EVENINGS, 5: EVENINGS, 6: [] },
       blocked: [],
       bookings: []
     };
   }
 
+  get isAdminUrl() {
+    try { return new URLSearchParams(window.location.search).get("admin") === "muni"; } catch (e) { return false; }
+  }
+
   componentDidMount() {
-    try {
-      const raw = localStorage.getItem(LS);
-      if (raw) {
-        const d = JSON.parse(raw);
-        this.setState({
-          template: d.template || this.state.template,
-          blocked: d.blocked || [],
-          bookings: d.bookings || []
-        });
-      }
-    } catch (e) {}
+    let local = null;
+    try { const raw = localStorage.getItem(LS); if (raw) local = JSON.parse(raw); } catch (e) {}
+    if (local && local.bookings) this.setState({ bookings: local.bookings });
+    fetch("availability.json", { cache: "no-store" })
+      .then(r => (r.ok ? r.json() : null))
+      .catch(() => null)
+      .then(pub => {
+        this.published = pub;
+        const draft = this.isAdminUrl && local && local.draft ? local.draft : null;
+        const src = draft || pub;
+        if (src) this.setState({ tz: src.tz || "Europe/Helsinki", template: src.template || this.state.template, blocked: src.blocked || [] });
+      });
+  }
+
+  availabilityFile() {
+    const st = this.state;
+    return JSON.stringify({ tz: st.tz, template: st.template, blocked: st.blocked }, null, 2) + "\n";
   }
 
   persist(patch) {
     this.setState(patch, () => {
       try {
         localStorage.setItem(LS, JSON.stringify({
-          template: this.state.template, blocked: this.state.blocked, bookings: this.state.bookings
+          bookings: this.state.bookings,
+          draft: { tz: this.state.tz, template: this.state.template, blocked: this.state.blocked }
         }));
       } catch (e) {}
     });
@@ -446,10 +498,12 @@ class Component extends DCLogic {
   }
 
   localFor(iso, slot) {
-    const d = new Date(`${iso}T${slot}:00+05:30`);
+    const d = zonedInstant(iso, slot, this.state.tz);
     const time = d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     const dayShift = d.toLocaleDateString("en-CA") !== iso;
-    return { time, dayShift, date: d.toLocaleDateString([], { day: "numeric", month: "short" }) };
+    const ist = fmtIn(d, "Asia/Kolkata");
+    const istShift = d.toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" }) !== iso;
+    return { time, dayShift, ist, istShift, at: d.getTime(), date: d.toLocaleDateString([], { day: "numeric", month: "short" }) };
   }
 
   get tzName() {
@@ -471,7 +525,9 @@ class Component extends DCLogic {
     if (!iso || this.state.blocked.includes(iso)) return [];
     const wd = new Date(iso + "T12:00:00").getDay();
     const taken = this.state.bookings.filter(b => b.date === iso).map(b => b.slot);
-    return (this.state.template[wd] || []).filter(s => !taken.includes(s));
+    const now = Date.now();
+    return (this.state.template[wd] || []).slice().sort()
+      .filter(s => !taken.includes(s) && zonedInstant(iso, s, this.state.tz).getTime() > now);
   }
 
   renderVals() {
@@ -512,8 +568,8 @@ class Component extends DCLogic {
     const slots = st.date && !unsure ? avail.map(t => {
       const L = this.localFor(st.date, t);
       return {
-      label: this.isIST ? t : L.time,
-      sub: this.isIST ? "IST" : (L.dayShift ? `${L.date} · ${t} IST` : `${t} IST`),
+      label: L.time,
+      sub: this.isIST ? (L.dayShift ? `${L.date} · IST` : "IST") : (L.istShift ? `+1d · ${L.ist} IST` : `${L.ist} IST`),
       disabled: false,
       bg: st.slot === t ? "#e8b04b" : "rgba(232,176,75,0.06)",
       border: st.slot === t ? "#e8b04b" : "rgba(232,176,75,0.4)",
@@ -525,19 +581,23 @@ class Component extends DCLogic {
 
     const pretty = st.date ? new Date(st.date + "T12:00:00").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" }) : null;
 
-    const adminRows = DAYS.map((day, wd) => ({
-      day: day.slice(0, 3),
-      cells: SLOTS.map(t => {
+    const ADMIN_ORDER = [1, 2, 3, 4, 5, 6, 0];
+    const refIso = todayIso;
+    const adminRows = SLOTS.map(t => ({
+      label: t,
+      ist: fmtIn(zonedInstant(refIso, t, st.tz), "Asia/Kolkata"),
+      cells: ADMIN_ORDER.map(wd => {
         const on = (st.template[wd] || []).includes(t);
         return {
-          label: on ? "on" : "—",
+          title: `${DAYS[wd]} ${t}`,
+          label: on ? "on" : "·",
           bg: on ? "#e8b04b" : "transparent",
           border: on ? "#e8b04b" : "rgba(242,236,225,0.18)",
           fg: on ? "#0d0f24" : "rgba(242,236,225,0.4)",
           onClick: () => {
             const cur = st.template[wd] || [];
             const next = on ? cur.filter(x => x !== t) : cur.concat([t]).sort();
-            this.persist({ template: { ...st.template, [wd]: next } });
+            this.persist({ template: { ...st.template, [wd]: next }, copied: false });
           }
         };
       })
@@ -585,6 +645,39 @@ class Component extends DCLogic {
         ? "You picked \"Not sure\". Fill in your question below and send it — I will reply with which reading suits it, and we book a time then. Nothing is payable now."
         : "Nothing open that day. Try another date.",
       slotTimes: SLOTS,
+      adminDays: ADMIN_ORDER.map(wd => DAYS[wd].slice(0, 3)),
+      zoneOptions: ZONES.map(([id, label]) => ({ id, label })),
+      adminTz: st.tz,
+      setAdminTz: (e) => {
+        // travelling: keep the same hours on the new local clock
+        if (e.target.value !== st.tz) this.persist({ tz: e.target.value, copied: false });
+      },
+      discardDraft: () => {
+        const pub = this.published;
+        if (!pub) return;
+        this.persist({ tz: pub.tz || "Europe/Helsinki", template: pub.template || {}, blocked: pub.blocked || [], copied: false });
+      },
+      presetEvenings: () => {
+        const next = { ...st.template };
+        [1, 2, 3, 4, 5].forEach(wd => { next[wd] = Array.from(new Set((next[wd] || []).concat(EVENINGS))).sort(); });
+        this.persist({ template: next, copied: false });
+      },
+      clearHours: () => this.persist({ template: { 0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [] }, copied: false }),
+      openHoursLabel: Object.values(st.template).reduce((n, a) => n + (a || []).length, 0) + " hours a week open",
+      publishHeading: (() => {
+        const pub = this.published;
+        if (!pub) return "Not published yet";
+        const norm = t => JSON.stringify([0,1,2,3,4,5,6].map(d => ((t || {})[d] || []).slice().sort()));
+        const same = (pub.tz || "") === st.tz && norm(pub.template) === norm(st.template)
+          && JSON.stringify((pub.blocked || []).slice().sort()) === JSON.stringify(st.blocked.slice().sort());
+        return same ? "Live on the site" : "Not published yet";
+      })(),
+      copyLabel: st.copied ? "Copied ✓" : "Copy availability",
+      copyAvailability: () => {
+        const txt = this.availabilityFile();
+        try { navigator.clipboard.writeText(txt); } catch (e) {}
+        this.setState({ copied: true });
+      },
       service: st.service, setService: (e) => this.setState({ service: e.target.value }),
       name: st.name, setName: (e) => this.setState({ name: e.target.value }),
       phone: st.phone, setPhone: (e) => this.setState({ phone: e.target.value }),
@@ -630,7 +723,7 @@ class Component extends DCLogic {
         { head: "Eligibility", body: "Readings are for adults aged 18 and over. Readings about a third party are given only in general terms and I may decline any request, including requests that are unlawful, abusive or intended to harm another person." },
         { head: "Confidentiality", body: "What you share in a reading stays private and is never published on the channels, the blog or social media. Sessions are not recorded by me unless you ask for a recording in writing. Birth details and notes are kept only as long as needed to deliver the reading." },
         { head: "Payment, rescheduling and refunds", body: `Fees are ₹${priceInr.toLocaleString("en-IN")} for clients paying in India by UPI and $${priceUsd} for international clients paying by PayPal, payable in full before the call. A slot may be rescheduled once, free, with at least 24 hours' notice. Payments for a reading already delivered are non-refundable. If I have to cancel, you receive a full refund or another slot, your choice.` },
-        { head: "Conduct of the call", body: "The call is held on WhatsApp at the booked time in IST. Please join within 10 minutes; beyond that the slot may be treated as used. Abusive or threatening conduct ends the session immediately, without refund." },
+        { head: "Conduct of the call", body: "The call is held on WhatsApp at the booked time shown on this page. Please join within 10 minutes; beyond that the slot may be treated as used. Abusive or threatening conduct ends the session immediately, without refund." },
         { head: "Limitation of liability", body: "To the fullest extent permitted by law, my total liability arising out of or in connection with a reading is limited to the fee you paid for it. I am not liable for any indirect, incidental, special or consequential loss, including loss of profit, opportunity, relationship or reputation." },
         { head: "Content on the channels", body: "Videos, blog posts and newsletter content are general educational material, not personal advice, and create no client relationship. All content remains my intellectual property and may not be reproduced commercially without permission." }
       ],
@@ -649,11 +742,11 @@ class Component extends DCLogic {
         if (!st.date || !st.slot || !st.agreed) return;
         this.send({ _subject: "Muni — booking request", type: "booking",
           service: st.service === "astro" ? "Astrology reading" : "Tarot reading",
-          date: st.date, time_ist: st.slot, name: st.name, phone: st.phone, email: st.email,
+          date: st.date, time_ist: this.localFor(st.date, st.slot).ist, time_muni: st.slot + " " + st.tz, client_local: this.localFor(st.date, st.slot).time + " " + (Intl.DateTimeFormat().resolvedOptions().timeZone || ""), name: st.name, phone: st.phone, email: st.email,
           question: st.note, region: st.region === "india" ? "India · UPI ₹" + priceInr : "International · PayPal $" + priceUsd,
           payment_reference: st.ref, terms_accepted: true });
         const booking = {
-          date: st.date, slot: st.slot, name: st.name, phone: st.phone, email: st.email,
+          date: st.date, slot: st.slot, tz: st.tz, name: st.name, phone: st.phone, email: st.email,
           note: st.note, service: st.service, region: st.region, ref: st.ref
         };
         this.persist({ bookings: st.bookings.concat([booking]), sent: true, slot: null });
@@ -663,7 +756,7 @@ class Component extends DCLogic {
             ? "Sent. I will reply with which reading suits your question, and we pick a time then."
             : "Requested. The slot is held for you — payment details and the call link follow by email and WhatsApp.")
         : "",
-      isAdmin: (() => { try { return new URLSearchParams(window.location.search).get("admin") === "muni"; } catch (e) { return false; } })(),
+      isAdmin: this.isAdminUrl,
       adminOpen: st.adminOpen,
       openAdmin: () => this.setState({ adminOpen: true }),
       closeAdmin: () => this.setState({ adminOpen: false }),
@@ -672,15 +765,15 @@ class Component extends DCLogic {
       setBlockDraft: (e) => this.setState({ blockDraft: e.target.value }),
       addBlock: () => {
         if (!st.blockDraft || st.blocked.includes(st.blockDraft)) return;
-        this.persist({ blocked: st.blocked.concat([st.blockDraft]).sort(), blockDraft: "" });
+        this.persist({ blocked: st.blocked.concat([st.blockDraft]).sort(), blockDraft: "", copied: false });
       },
       blockedList: st.blocked.map(b => ({
         label: new Date(b + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
-        onClick: () => this.persist({ blocked: st.blocked.filter(x => x !== b) })
+        onClick: () => this.persist({ blocked: st.blocked.filter(x => x !== b), copied: false })
       })),
       bookingList: st.bookings.slice().reverse().map(b => ({
         who: `${b.name || "Unnamed"} · ${b.service === "astro" ? "Astrology" : b.service === "tarot" ? "Tarot" : "Not sure — question only"}`,
-        when: b.date ? `${b.ref ? "Ref " + b.ref + " · " : ""}${new Date(b.date + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" })} · ${b.slot} IST · ${b.phone || b.email}` : `No time yet · ${b.phone || b.email}`,
+        when: b.date ? `${b.ref ? "Ref " + b.ref + " · " : ""}${new Date(b.date + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" })} · ${b.slot}${b.tz ? " " + b.tz.split("/").pop().replace("_", " ") : " IST"} · ${b.phone || b.email}` : `No time yet · ${b.phone || b.email}`,
         tag: b.service === "unsure" ? "Enquiry" : b.region === "india" ? `₹${priceInr.toLocaleString("en-IN")}` : `$${priceUsd}`
       })),
       bookingsNote: st.bookings.length ? "Booked slots are removed from the client calendar automatically." : "No requests yet. They appear here as clients book.",
