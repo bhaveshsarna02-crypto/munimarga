@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+</helmet>
+<div style="display: inline-flex; font-family: 'Spectral', Georgia, serif">
+  <button onClick="{{ open }}" style="display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 9px 16px; background: linear-gradient(100deg, #f6cd85, #e8b04b 55%, #d69a33); color: #0d0f24; border: none; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer" style-hover="filter: brightness(1.08)">Donate</button>
+
+  <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ close }}" style="position: fixed; inset: 0; z-index: 900; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(6,7,18,0.82); backdrop-filter: blur(6px)">
+      <div onClick="{{ stop }}" style="width: 100%; max-width: 520px; max-height: 92vh; overflow-y: auto; background: #12142c; border: 1px solid rgba(232,176,75,0.4); padding: clamp(24px, 4vw, 38px); text-align: left">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px">
+          <div>
+            <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: #e8b04b">Support the work</p>
+            <h2 style="margin: 0; font-family: 'Marcellus', serif; font-weight: 400; font-size: clamp(22px, 3vw, 28px); line-height: 1.2; color: #f2ece1">The videos and writing stay free.</h2>
+          </div>
+          <button onClick="{{ close }}" style="flex: 0 0 auto; width: 32px; height: 32px; background: transparent; border: 1px solid rgba(242,236,225,0.28); color: #f2ece1; border-radius: 2px; cursor: pointer; font-size: 15px; line-height: 1" style-hover="border-color: #e8b04b; color: #e8b04b">✕</button>
+        </div>
+        <p style="margin: 0 0 24px; font-size: 15px; line-height: 1.65; color: rgba(242,236,225,0.88)">They take considerable time to research, script and cut. If they have been useful, a contribution keeps them coming. No tier, no reward — just support.</p>
+
+        <div style="display: flex; gap: 8px; margin-bottom: 22px">
+          <button onClick="{{ pickIndia }}" style="flex: 1 1 0; padding: 12px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: {{ indiaBg }}; border: 1px solid {{ indiaBorder }}; color: {{ indiaFg }}">India · UPI</button>
+          <button onClick="{{ pickIntl }}" style="flex: 1 1 0; padding: 12px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: {{ intlBg }}; border: 1px solid {{ intlBorder }}; color: {{ intlFg }}">World · PayPal</button>
+        </div>
+
+        <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(242,236,225,0.7)">Choose an amount</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px">
+          <sc-for list="{{ amountOptions }}" as="a" hint-placeholder-count="4">
+            <button onClick="{{ a.onClick }}" style="padding: 10px 16px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 13px; background: {{ a.bg }}; border: 1px solid {{ a.border }}; color: {{ a.fg }}">{{ a.label }}</button>
+          </sc-for>
+          <button onClick="{{ pickCustom }}" style="padding: 10px 16px; border-radius: 2px; cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 13px; background: {{ customBg }}; border: 1px solid {{ customBorder }}; color: {{ customFg }}">Another amount</button>
+        </div>
+        <sc-if value="{{ isCustom }}" hint-placeholder-val="{{ false }}">
+          <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 12px 14px; border: 1px solid rgba(232,176,75,0.4); background: rgba(232,176,75,0.05)">
+            <span style="font-family: 'Marcellus', serif; font-size: 20px; color: #e8b04b">{{ currencySymbol }}</span>
+            <input type="number" min="1" step="1" placeholder="{{ customPlaceholder }}" value="{{ customValue }}" onChange="{{ setCustom }}" style="flex: 1 1 auto; min-width: 0; padding: 8px 10px; background: #12142c; border: 1px solid rgba(242,236,225,0.2); color: #f2ece1; font-family: 'IBM Plex Mono', monospace; font-size: 15px; border-radius: 2px" />
+          </label>
+        </sc-if>
+        <div style="margin-bottom: 10px"></div>
+
+        <sc-if value="{{ showUpi }}" hint-placeholder-val="{{ true }}">
+          <div style="display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); align-items: center; padding: 18px; border: 1px solid rgba(232,176,75,0.35); background: rgba(232,176,75,0.06)">
+            <div style="min-width: 0; display: flex; justify-content: center">{{ qrEl }}</div>
+            <div style="min-width: 0">
+              <p style="margin: 0 0 6px; font-family: 'Marcellus', serif; font-size: 24px; color: #f2ece1">{{ amountLabel }}</p>
+              <p style="margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,236,225,0.74)">UPI · any app</p>
+              <a href="{{ upiLink }}" style="display: inline-flex; align-items: center; white-space: nowrap; padding: 11px 18px; background: #e8b04b; color: #0d0f24; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none" style-hover="background: #f6cd85">Pay in UPI app</a>
+              <p style="margin: 12px 0 0; font-size: 13px; line-height: 1.55; color: rgba(242,236,225,0.78)">Scan on a phone, or tap to open GPay / PhonePe / Paytm.</p>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showPaypal }}" hint-placeholder-val="{{ false }}">
+          <div style="display: grid; gap: 12px; padding: 18px; border: 1px solid rgba(106,178,160,0.4); background: rgba(106,178,160,0.07)">
+            <p style="margin: 0; font-family: 'Marcellus', serif; font-size: 24px; color: #f2ece1">{{ amountLabel }}</p>
+            <a href="{{ paypalUrl }}" style="display: inline-flex; align-items: center; justify-self: start; white-space: nowrap; padding: 12px 20px; background: #6ab2a0; color: #0a0c1d; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none" style-hover="background: #86c6b6">Give with PayPal</a>
+            <p style="margin: 0; font-size: 13px; line-height: 1.55; color: rgba(242,236,225,0.78)">Opens PayPal in a new tab with the amount filled in.</p>
+          </div>
+        </sc-if>
+
+        <p style="margin: 20px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(242,236,225,0.6)">Thank you · धन्यवाद</p>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:180,&quot;height&quot;:60},&quot;upiId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;9999985843@upi&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;payeeName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Muni&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;paypalLink&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.paypal.com/paypalme/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Payment&quot;},&quot;inrAmounts&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;number[]&quot;},&quot;usdAmounts&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;number[]&quot;}}">
+class Component extends DCLogic {
+  state = { isOpen: false, region: "india", inr: 250, usd: 5, custom: false, customText: "" };
+
+  amount() {
+    const st = this.state;
+    if (st.custom) {
+      const n = Math.max(1, Math.round(Number(st.customText) || 0));
+      return n || (st.region === "india" ? 250 : 5);
+    }
+    return st.region === "india" ? st.inr : st.usd;
+  }
+
+  componentDidMount() {
+    this.onKey = (e) => { if (e.key === "Escape") this.setState({ isOpen: false }); };
+    window.addEventListener("keydown", this.onKey);
+  }
+  componentWillUnmount() { window.removeEventListener("keydown", this.onKey); }
+
+  upiUri() {
+    const p = new URLSearchParams({
+      pa: this.props.upiId || "9999985843@upi",
+      pn: this.props.payeeName || "Muni",
+      am: String(this.amount()),
+      cu: "INR",
+      tn: "Support munimarga.in"
+    });
+    return "upi://pay?" + p.toString();
+  }
+
+  qrDataUrl(text) {
+    try {
+      const qr = window.qrcode(0, "M");
+      qr.addData(text);
+      qr.make();
+      return qr.createDataURL(6, 2);
+    } catch (e) { return ""; }
+  }
+
+  renderVals() {
+    const st = this.state;
+    const india = st.region === "india";
+    const inrAmounts = this.props.inrAmounts ?? [100, 250, 500, 1000];
+    const usdAmounts = this.props.usdAmounts ?? [3, 5, 10, 25];
+    const ppEmail = this.props.paypalEmail ?? "satyendrasarna@gmail.com";
+    const sel = (on) => ({
+      bg: on ? "#e8b04b" : "transparent",
+      border: on ? "#e8b04b" : "rgba(242,236,225,0.24)",
+      fg: on ? "#0d0f24" : "rgba(242,236,225,0.9)"
+    });
+    const iSel = sel(india), wSel = sel(!india);
+    const amt = this.amount();
+    const uri = this.upiUri();
+    const data = india ? this.qrDataUrl(uri) : "";
+
+    return {
+      isOpen: st.isOpen,
+      open: () => this.setState({ isOpen: true }),
+      close: () => this.setState({ isOpen: false }),
+      stop: (e) => e.stopPropagation(),
+      pickIndia: () => this.setState({ region: "india", custom: false, customText: "" }),
+      pickIntl: () => this.setState({ region: "intl", custom: false, customText: "" }),
+      indiaBg: iSel.bg, indiaBorder: iSel.border, indiaFg: iSel.fg,
+      intlBg: wSel.bg, intlBorder: wSel.border, intlFg: wSel.fg,
+      amountOptions: (india ? inrAmounts : usdAmounts).map(v => {
+        const on = !st.custom && (india ? st.inr === v : st.usd === v);
+        const s = sel(on);
+        return {
+          label: india ? "₹" + v.toLocaleString("en-IN") : "$" + v,
+          bg: s.bg, border: s.border, fg: s.fg,
+          onClick: () => this.setState(india ? { inr: v, custom: false } : { usd: v, custom: false })
+        };
+      }),
+      isCustom: st.custom,
+      pickCustom: () => this.setState({ custom: true }),
+      customBg: sel(st.custom).bg, customBorder: sel(st.custom).border, customFg: sel(st.custom).fg,
+      currencySymbol: india ? "₹" : "$",
+      customPlaceholder: india ? "e.g. 1100" : "e.g. 20",
+      customValue: st.customText,
+      setCustom: (e) => this.setState({ customText: e.target.value, custom: true }),
+      amountLabel: india ? "₹" + amt.toLocaleString("en-IN") : "$" + amt.toLocaleString("en-US"),
+      showUpi: india,
+      showPaypal: !india,
+      upiId: this.props.upiId ?? "9999985843@upi",
+      upiLink: uri,
+      qrEl: data ? React.createElement("img", { src: data, alt: "UPI QR code", style: { width: "100%", maxWidth: "150px", aspectRatio: "1 / 1", background: "#f2ece1", padding: "7px", borderRadius: "2px" } }) : null,
+      paypalUrl: "https://www.paypal.com/donate/?business=" + encodeURIComponent(ppEmail) +
+        "&amount=" + amt + "&currency_code=USD&item_name=" + encodeURIComponent("Support Muni · munimarga.in") + "&no_note=0"
+    };
+  }
+}
+</script>
+</body>
+</html>
